@@ -99,7 +99,8 @@
   .pf-nav a:hover, .pf-nav a:focus-visible { background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
   .pf-header-contact { min-height: 2.75rem; font-size: var(--text-caption); padding-inline: 1rem; }
   .pf-core { position: absolute; inset: 14%; border: 1px solid color-mix(in srgb, var(--accent) 60%, var(--border)); border-radius: 50%; background: radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--foreground) 65%, transparent), transparent 30%), radial-gradient(circle at 36% 30%, var(--accent), var(--surface) 72%); box-shadow: inset -1.5rem -2rem 3rem color-mix(in srgb, var(--background) 70%, transparent), inset 0 0 1.5rem color-mix(in srgb, var(--accent) 30%, transparent), 0 0 5rem color-mix(in srgb, var(--accent) 20%, transparent); }
-  .pf-orbit-one::after { content: ""; position: absolute; top: 14%; inset-inline-start: 13%; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--accent-secondary); box-shadow: 0 0 1.5rem var(--accent); }
+  /* Center the dot on the 1px orbit stroke; the parent supplies the rotation. */
+  .pf-orbit-one::after { content: ""; position: absolute; top: -0.5px; left: 50%; transform: translate(-50%, -50%); width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--accent-secondary); box-shadow: 0 0 1.5rem var(--accent); }
   .pf-project:hover, .pf-project:focus-within { border-color: color-mix(in srgb, var(--accent) 65%, var(--border)); box-shadow: var(--shadow-card), var(--glow-accent); translate: 0 -5px; }
   .pf-project:hover .pf-project-shape { transform: rotate(12deg); }
   .pf-job:hover, .pf-job[open] { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); }

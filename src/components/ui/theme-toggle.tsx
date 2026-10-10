@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
-export function ThemeToggle() {
+export function ThemeToggle({ label = "Toggle color theme" }: { label?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
 
   function toggleTheme() {
@@ -18,8 +18,8 @@ export function ThemeToggle() {
       variant="secondary"
       size="icon"
       onClick={toggleTheme}
-      aria-label="Toggle color theme"
-      title="Toggle color theme"
+      aria-label={label}
+      title={label}
     >
       <svg className="size-5 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
         <path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z" />

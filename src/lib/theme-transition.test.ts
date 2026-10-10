@@ -64,4 +64,27 @@ describe("theme transitions", () => {
     await Promise.resolve();
     expect(doc.documentElement.classList.remove).toHaveBeenCalledWith("theme-transition");
   });
+
+  it("does not let an older animation clear the styling of a newer one", async () => {
+    const { doc } = browser();
+    const completions: (() => void)[] = [];
+    const skip = vi.fn();
+    doc.startViewTransition = (update) => {
+      update();
+      return {
+        ready: Promise.resolve(),
+        finished: new Promise<void>((resolve) => completions.push(resolve)),
+        skipTransition: skip,
+      };
+    };
+    transitionTheme(() => {}, { x: 40, y: 60 });
+    transitionTheme(() => {}, { x: 40, y: 60 });
+    expect(skip).toHaveBeenCalledOnce();
+    completions[0]();
+    await Promise.resolve();
+    expect(doc.documentElement.classList.remove).not.toHaveBeenCalled();
+    completions[1]();
+    await Promise.resolve();
+    expect(doc.documentElement.classList.remove).toHaveBeenCalledOnce();
+  });
 });

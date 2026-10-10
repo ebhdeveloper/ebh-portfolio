@@ -1,0 +1,46 @@
+@layer components {
+  .ui-button {
+    @apply inline-flex shrink-0 items-center justify-center gap-2 rounded-control border border-transparent text-body font-bold leading-none;
+    min-height: var(--spacing-control);
+    padding-inline: calc(var(--spacing) * 5);
+    background: var(--accent);
+    color: var(--accent-foreground);
+    transition-property: background-color, color, border-color, opacity;
+    transition-duration: var(--default-transition-duration);
+    transition-timing-function: var(--default-transition-timing-function);
+  }
+
+  .ui-button:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .ui-button[data-variant="secondary"] {
+    border-color: var(--border);
+    background: var(--surface);
+    color: var(--foreground);
+  }
+
+  .ui-button[data-variant="secondary"]:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--accent-foreground);
+    opacity: 1;
+  }
+
+  .ui-button[data-size="icon"] {
+    width: var(--spacing-control-icon);
+    min-height: var(--spacing-control-icon);
+    padding-inline: 0;
+  }
+
+  .ui-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ui-button {
+      transition: none;
+    }
+  }
+}

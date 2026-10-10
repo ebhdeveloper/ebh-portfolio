@@ -49,6 +49,11 @@
 /* Both themes share the same visual roles, with distinct contrast values. */
 :root {
   color-scheme: light;
+  --resume-paper: #ffffff;
+  --resume-ink: #102c44;
+  --resume-muted: #4b6378;
+  --resume-accent: #215b88;
+  --resume-rule: #c5d8e8;
   --background: #f1f7fc;
   --foreground: #102c44;
   --surface: #ffffff;

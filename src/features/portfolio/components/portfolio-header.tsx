@@ -3,6 +3,7 @@ import { getPathname } from '@/i18n/navigation';
 import { ResumeMenu } from '@/features/resume/components/resume-menu';
 import { resumeProfiles } from '@/features/resume/model/presentation';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { LanguageSwitch } from '@/components/ui/language-switch';
 
 export async function PortfolioHeader() {
   const t = await getTranslations('Portfolio');
@@ -39,17 +40,14 @@ export async function PortfolioHeader() {
           <a className="ui-button pf-header-contact" href="#contact">
             {t('contact')}
           </a>
-          <a
+          <LanguageSwitch
             href={getPathname({
               href: '/',
               locale: locale === 'fa' ? 'en' : 'fa',
             })}
-            lang={locale === 'fa' ? 'en' : 'fa'}
-            aria-label={t('languageLabel')}
-            className="pf-language"
-          >
-            {t('language')}
-          </a>
+            label={t('languageLabel')}
+            code={locale === 'fa' ? 'EN' : 'FA'}
+          />
           <ThemeToggle label={t('themeToggle')} />
         </div>
       </header>

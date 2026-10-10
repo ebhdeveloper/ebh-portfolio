@@ -4,7 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { routing } from "@/i18n/routing";
-import { iranianSans, montserrat } from "@/lib/fonts";
+import { iranSans, montserrat } from "@/lib/fonts";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -27,7 +27,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
       lang={locale}
       dir={locale === "fa" ? "rtl" : "ltr"}
       suppressHydrationWarning
-      className={`${montserrat.variable} ${iranianSans.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${iranSans.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <NextIntlClientProvider>

@@ -10,9 +10,9 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-artwork: var(--artwork);
   --color-ring: var(--ring);
-  --font-sans: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
-  --font-en: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
-  --font-fa: var(--font-iranian-sans), var(--font-montserrat), system-ui, sans-serif;
+  --font-sans: var(--font-montserrat), var(--font-iran-sans), system-ui, sans-serif;
+  --font-en: var(--font-montserrat), var(--font-iran-sans), system-ui, sans-serif;
+  --font-fa: var(--font-iran-sans), var(--font-montserrat), system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   --shadow-card: 0 20px 60px -24px var(--shadow-color);
 }
@@ -41,6 +41,8 @@
   --motion-orbit: 28s;
   --motion-float: 7s;
   --motion-glow: 10s;
+  --motion-theme: 650ms;
+  --motion-theme-icon: 450ms;
   --ease-smooth: cubic-bezier(0.2, 0.7, 0.2, 1);
   --default-transition-duration: 220ms;
   --default-transition-timing-function: cubic-bezier(0.2, 0, 0, 1);

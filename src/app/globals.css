@@ -13,12 +13,12 @@
   }
 
   html[lang="fa"], :where([lang="fa"]) {
-    font-family: var(--font-iranian-sans), var(--font-montserrat), system-ui, sans-serif;
+    font-family: var(--font-iran-sans), var(--font-montserrat), system-ui, sans-serif;
     font-weight: 400;
   }
 
   html[lang="en"], :where([lang="en"]) {
-    font-family: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
+    font-family: var(--font-montserrat), var(--font-iran-sans), system-ui, sans-serif;
     font-weight: 500;
   }
 
@@ -34,4 +34,29 @@
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
+  body { transition: background-color var(--motion-theme) var(--ease-smooth), color var(--motion-theme) var(--ease-smooth); }
+  .theme-transition body, .theme-transition .ui-button, .theme-transition .ui-theme-symbol svg { transition: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+  ::view-transition-old(root) { z-index: 1; }
+  ::view-transition-new(root) { z-index: 2; animation: theme-reveal var(--motion-theme) var(--ease-smooth) both; }
+  ::view-transition-group(theme-symbol) { animation-duration: var(--motion-theme-icon); }
+  ::view-transition-old(theme-symbol) { animation: theme-icon-out var(--motion-theme-icon) var(--ease-smooth) both; }
+  ::view-transition-new(theme-symbol) { animation: theme-icon-in var(--motion-theme-icon) var(--ease-smooth) both; }
+}
+
+@keyframes theme-reveal {
+  from { clip-path: circle(0 at var(--theme-origin-x, 50%) var(--theme-origin-y, 50%)); }
+  to { clip-path: circle(150vmax at var(--theme-origin-x, 50%) var(--theme-origin-y, 50%)); }
+}
+
+@keyframes theme-icon-out {
+  to { opacity: 0; transform: rotate(-90deg) scale(0.4); }
+}
+@keyframes theme-icon-in {
+  from { opacity: 0; transform: rotate(90deg) scale(0.4); }
+  to { opacity: 1; transform: rotate(0deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }

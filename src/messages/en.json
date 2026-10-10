@@ -4,6 +4,7 @@
     "description": "Web and mobile work by Ebrahim Hamidi. React, React Native, native integrations and thoughtful frontend architecture."
   },
   "Portfolio": {
+    "name":"Ebrahim Hamidi",
     "skip": "Skip to content",
     "navigation": "Main navigation",
     "work": "Work",

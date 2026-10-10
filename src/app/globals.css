@@ -1,8 +1,27 @@
 @import "tailwindcss";
 @import "../styles/theme.css";
+@import "../styles/components.css";
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
+    font-weight: 500;
+  }
+
+  :where([lang="fa"]) {
+    font-family: var(--font-iranian-sans), var(--font-montserrat), system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  :where([lang="en"]) {
+    font-family: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
+    font-weight: 500;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 4px;
+  }
 }

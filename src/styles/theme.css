@@ -1,23 +1,69 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-artwork: var(--artwork);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
+  --font-en: var(--font-montserrat), var(--font-iranian-sans), system-ui, sans-serif;
+  --font-fa: var(--font-iranian-sans), var(--font-montserrat), system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --shadow-card: 0 20px 60px -24px var(--shadow-color);
 }
 
 @theme {
+  --spacing: 0.25rem;
+  --spacing-page: clamp(1rem, 4vw, 3rem);
+  --spacing-section: clamp(4rem, 8vw, 7rem);
+  --spacing-card: 1.5rem;
+  --spacing-control: 3rem;
+  --spacing-control-icon: 2.75rem;
   --radius-card: 20px;
+  --radius-input: 12px;
+  --radius-control: 9999px;
   --container-page: 75rem;
+  --text-display: clamp(2.5rem, 8vw, 6rem);
+  --text-display--line-height: 1.15;
+  --text-title: clamp(1.875rem, 4vw, 3rem);
+  --text-title--line-height: 1.35;
+  --text-body: 1rem;
+  --text-body--line-height: 1.85;
+  --text-caption: 0.875rem;
+  --text-caption--line-height: 1.7;
+  --default-transition-duration: 160ms;
+  --default-transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: #f3f3e9;
+  --foreground: #182319;
+  --surface: #e7e9dd;
+  --muted-foreground: #586359;
+  --border: #cbd1c3;
+  --accent: #456321;
+  --accent-foreground: #f6ffe9;
+  --artwork: #d7dec6;
+  --ring: #456321;
+  --shadow-color: #34552320;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  color-scheme: dark;
+  --background: #0e1110;
+  --foreground: #f2f4e9;
+  --surface: #181d19;
+  --muted-foreground: #a3ada4;
+  --border: #303931;
+  --accent: #c5ed78;
+  --accent-foreground: #17240c;
+  --artwork: #1f3024;
+  --ring: #c5ed78;
+  --shadow-color: #00000066;
 }

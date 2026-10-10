@@ -70,6 +70,65 @@
   .ui-not-found h1 { font-size: var(--text-title); font-weight: 700; }
   .ui-not-found p { color: var(--muted-foreground); line-height: var(--text-body--line-height); max-width: 32rem; }
 
+  .ui-pointer-effects {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity var(--default-transition-duration) var(--ease-smooth);
+  }
+  .ui-pointer-effects[data-visible="true"] { opacity: 1; }
+  .ui-pointer-effects > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+  }
+  .ui-pointer-glow {
+    width: 1200px;
+    height: 1200px;
+    margin: -600px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 8%, transparent), color-mix(in srgb, var(--accent-secondary) 3%, transparent) 40%, transparent 70%);
+  }
+  .ui-pointer-ring > span, .ui-pointer-dot > span {
+    display: block;
+    border-radius: var(--radius-control);
+    transition: transform var(--default-transition-duration) var(--ease-smooth), background-color var(--default-transition-duration), border-color var(--default-transition-duration), box-shadow var(--default-transition-duration);
+  }
+  .ui-pointer-ring > span {
+    width: 36px;
+    height: 36px;
+    margin: -18px;
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    background: color-mix(in srgb, var(--accent) 4%, transparent);
+  }
+  .ui-pointer-dot > span {
+    width: 8px;
+    height: 8px;
+    margin: -4px;
+    background: var(--accent);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 70%, transparent);
+  }
+  .ui-pointer-effects[data-interactive="true"] .ui-pointer-ring > span {
+    transform: scale(1.9);
+    border-color: color-mix(in srgb, var(--accent) 85%, transparent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    box-shadow: 0 0 25px color-mix(in srgb, var(--accent) 25%, transparent), inset 0 0 15px color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+  .ui-pointer-effects[data-interactive="true"] .ui-pointer-dot > span { transform: scale(1.6); }
+  .ui-pointer-effects[data-pressed="true"] .ui-pointer-ring > span { transform: scale(0.85); }
+  .ui-pointer-effects[data-pressed="true"] .ui-pointer-dot > span { transform: scale(0.75); }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .ui-pointer-effects { display: block; }
+  }
+  @media print {
+    .ui-pointer-effects { display: none !important; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .ui-theme-toggle svg { transition: none; }
     .ui-button {

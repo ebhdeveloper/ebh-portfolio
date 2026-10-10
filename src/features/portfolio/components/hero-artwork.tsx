@@ -1,3 +1,5 @@
+import { BrandMark } from "@/components/ui/brand-mark";
+
 export function HeroArtwork({
   web,
   mobile,
@@ -15,9 +17,9 @@ export function HeroArtwork({
         <div className="pf-orbit pf-orbit-two" />
         <div className="pf-orbit pf-orbit-three" />
         <div className="pf-core">
-          <span className="pf-object-label" dir="ltr">
-            Ebh
-          </span>
+          <div className="pf-object-label">
+            <BrandMark className="pf-hero-mark" />
+          </div>
         </div>
       </div>
       <div className="pf-floating pf-float-web">

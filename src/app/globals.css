@@ -4,7 +4,9 @@
 
 @layer base {
   body {
-    background: var(--background);
+    background-color: var(--background);
+    background-image: var(--gradient-page);
+    background-repeat: no-repeat;
     color: var(--foreground);
     font-family: inherit;
     font-weight: inherit;
@@ -28,4 +30,8 @@
   section[id] {
     scroll-margin-top: 2rem;
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { PointerEffects } from "@/components/ui/pointer-effects";
 import { routing } from "@/i18n/routing";
 import { iranSans, montserrat } from "@/lib/fonts";
 import "../globals.css";
@@ -31,7 +32,10 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
     >
       <body className="min-h-full">
         <NextIntlClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            {children}
+            <PointerEffects />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -19,7 +19,7 @@
     "heroDescription": "I build web and mobile products with care for architecture, performance, and the details that make them feel right.",
     "viewWork": "Explore my work",
     "getInTouch": "Get in touch",
-    "webLabel": "React · Web",
+    "webLabel": "React - Next JS · Web",
     "mobileLabel": "React Native · Mobile",
     "visualCaption": "ENGINEERING / WITH INTENT",
     "specialty": "Senior React & React Native engineer",
@@ -53,5 +53,18 @@
     "title": "This page could not be found.",
     "description": "The address may have changed. You can return to the portfolio to explore my work.",
     "return": "Back to portfolio"
+  },
+  "Resume": {
+    "menu": "Resume",
+    "choose": "Choose version",
+    "back": "Back to portfolio",
+    "download": "Download PDF",
+    "print": "Print",
+    "preparing": "Preparing…",
+    "kicker": "YOUR NEXT CONVERSATION",
+    "title": "{profile} resume",
+    "description": "Experience, projects and skills in a clean, printable document.",
+    "incomplete": "This version currently contains contact information only. Experience and skills will appear when they are added to its resume JSON.",
+    "printHint": "For a PDF from the print dialog, choose Save as PDF. For a direct download, use Download PDF."
   }
 }

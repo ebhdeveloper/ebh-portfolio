@@ -6,7 +6,9 @@ export function HeroArtwork({ web, mobile, caption }: { web: string; mobile: str
         <div className="pf-orbit pf-orbit-one" />
         <div className="pf-orbit pf-orbit-two" />
         <div className="pf-orbit pf-orbit-three" />
-        <span className="pf-object-label" dir="ltr">eh.</span>
+        <div className="pf-core">
+          <span className="pf-object-label" dir="ltr">eh.</span>
+        </div>
       </div>
       <div className="pf-floating pf-float-web"><span className="pf-dot" />{web}</div>
       <div className="pf-floating pf-float-mobile"><span className="pf-dot" />{mobile}</div>

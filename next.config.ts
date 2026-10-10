@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  serverExternalPackages: ["@react-pdf/renderer"],
+  outputFileTracingIncludes: {
+    "/api/resume/*": ["./src/assets/fonts/montserrat-*.ttf"],
+  },
   experimental: {
     agentFeedback: true,
   },

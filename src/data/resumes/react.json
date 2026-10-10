@@ -1,0 +1,182 @@
+{
+  "basics": {
+    "name": "Ebrahim Hamidi",
+    "email": "ebh.developer@gmail.com",
+    "url": "https://github.com/ebhdeveloper",
+    "linkedin": "https://linkedin.com/in/ebrahimhamidi",
+    "location": {
+      "city": "Tehran",
+      "countryCode": "IR"
+    },
+    "label": "Senior React & Frontend Engineer",
+    "summary": "Senior React and Frontend Engineer with 7+ years of experience building high-performance web applications, data-intensive dashboards, and digital products. Expert in React, Next.js, TypeScript, Astro, frontend architecture, real-time interfaces, PWAs, internationalization, and automated testing. Improved rendering and load performance by up to 90% and owned products from technical design through production delivery."
+  },
+  "work": [
+    {
+      "id": "namarang",
+      "company": "Namarang",
+      "position": "Senior React Engineer",
+      "location": "Tehran, Iran",
+      "startDate": "2025-06",
+      "highlights": [
+        "Architect and deliver data-intensive operational dashboards using React, Next.js, TypeScript, Redux, and AG Grid.",
+        "Reduced initial loading and table-rendering latency by up to 90% through component refactoring, render optimization, state-management improvements, and removal of frontend bottlenecks.",
+        "Built reusable enterprise data tables with server-side pagination, multi-column filtering and sorting, inline editing, grouping, dynamic columns, selection, and export.",
+        "Implemented WebSocket-based updates for operational records, workflow progress, and status changes without manual refreshes."
+      ]
+    },
+    {
+      "id": "beyondgrow",
+      "company": "BeyondGrow",
+      "position": "Senior Frontend Engineer (Astro)",
+      "location": "Location not specified",
+      "startDate": "2023",
+      "endDate": "2024",
+      "highlights": [
+        "Owned the BeyondGrow product website from frontend architecture through production launch using Astro.",
+        "Built a bilingual English/Thai experience and light/dark themes using localized navigation, scalable internationalization patterns, reusable design tokens, and theme-aware components.",
+        "Used Astro's server-first, low-JavaScript architecture, responsive components, semantic HTML, and asset optimization to support fast loads, strong Core Web Vitals, accessibility, and SEO."
+      ]
+    },
+    {
+      "id": "youtopin",
+      "company": "Youtopin",
+      "position": "Senior React & Next.js Engineer",
+      "location": "Location not specified",
+      "startDate": "2021",
+      "endDate": "2023",
+      "highlights": [
+        "Designed and developed a complex tour-leader dashboard using React, Next.js, and TypeScript for travel operations and tour-management workflows.",
+        "Improved data-heavy views by optimizing component rendering, state updates, and data-loading flows.",
+        "Translated complex requirements into responsive UI patterns for forms, structured travel data, and multi-step workflows in collaboration with product and design teams."
+      ]
+    },
+    {
+      "id": "simkhan",
+      "company": "Simkhan",
+      "position": "Senior React & Next.js Engineer",
+      "location": "Tehran, Iran",
+      "startDate": "2019",
+      "endDate": "2020",
+      "highlights": [
+        "Led the end-to-end redesign of a high-traffic SIM-card marketplace using React, Next.js, and TypeScript, modernizing search, listing, seller, and purchasing workflows.",
+        "Improved performance across data-heavy pages by optimizing rendering, data fetching, component structure, and asset delivery.",
+        "Built advanced filtering across operator, prefix, SIM type, condition, payment method, seller type, and vanity-number patterns.",
+        "Enhanced Progressive Web App capabilities and added automated tests for critical components and business workflows."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "beyondgrow",
+      "title": "BeyondGrow",
+      "description": "Bilingual English/Thai product website with light and dark themes, developed from frontend architecture through launch.",
+      "type": "web",
+      "technologies": [
+        "Astro"
+      ],
+      "links": {
+        "website": "https://beyondgrow.app/"
+      }
+    },
+    {
+      "id": "youtopin",
+      "title": "Youtopin",
+      "description": "Tour-leader dashboard for travel operations and tour-management workflows.",
+      "type": "web",
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript"
+      ],
+      "links": {
+        "website": "https://youtopin.app/"
+      }
+    },
+    {
+      "id": "simkhan",
+      "title": "Simkhan",
+      "description": "SIM-card marketplace redesign with advanced search, filtering, and Progressive Web App capabilities.",
+      "type": "web",
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript"
+      ],
+      "links": {
+        "website": "https://simkhan.ir/"
+      }
+    },
+    {
+      "id": "wonderfruit",
+      "title": "Wonderfruit",
+      "description": "Contributed to the Wonderfruit website as a developer working alongside the team.",
+      "type": "web",
+      "technologies": [],
+      "links": {
+        "website": "https://wonderfruit.co/"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages & Frameworks",
+      "keywords": [
+        "React",
+        "Next.js",
+        "Astro",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "name": "Architecture & Data",
+      "keywords": [
+        "Frontend Architecture",
+        "Component-Driven Development",
+        "Redux",
+        "State Management",
+        "AG Grid",
+        "WebSocket",
+        "REST APIs",
+        "Server-Side Pagination"
+      ]
+    },
+    {
+      "name": "Performance & Quality",
+      "keywords": [
+        "Web Performance",
+        "Rendering Optimization",
+        "Core Web Vitals",
+        "SEO",
+        "PWA",
+        "Internationalization",
+        "Accessibility",
+        "Jest",
+        "Integration Testing",
+        "E2E Testing"
+      ]
+    },
+    {
+      "name": "Delivery & Infrastructure",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "Docker",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI",
+        "Firebase"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Pooyesh University of Qom — Qom, Iran",
+      "area": "Software Engineering",
+      "studyType": "Master of Science (M.Sc.)"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "basics": {
+    "name": "Ebrahim Hamidi",
+    "label": "Senior Frontend Developer",
+    "email": "ebh.developer@gmail.com",
+    "url": "https://github.com/ebhdeveloper",
+    "linkedin": "https://linkedin.com/in/ebrahimhamidi",
+    "summary": "Senior React Native Engineer with 7+ years of experience building scalable mobile applications. Background in native Android (Java) and iOS, now focused on React Native and TypeScript. Built products across e‑commerce, IoT, digital signature, and service platforms. Interested in complex UI, offline‑first architecture, and secure, reliable mobile systems.",
+    "location": {
+      "city": "Tehran",
+      "countryCode": "IR"
+    }
+  },
+  "work": [
+    {
+      "company": "Namarang",
+      "position": "Senior React  Engineer (Next)",
+      "location": "Tehran",
+      "startDate": "2025-06",
+      "highlights": [
+        "Architected and delivered high‑complexity, data‑intensive dashboards using React, TypeScript, Redux, and AG Grid, designing scalable table structures and interaction models similar to DevExtreme for manufacturing and advertising workflows.",
+        "Led performance optimization efforts, improving rendering efficiency, reducing re‑render bottlenecks, and implementing advanced state‑management patterns for large datasets and high‑frequency UI updates.",
+        "Enhanced analytics and reporting flows by defining filtering, sorting, and data‑processing logic that improved usability and reduced load time across internal operational tools."
+      ],
+      "id": "namarang"
+    },
+    {
+      "company": "Dp-Lamp",
+      "position": "Senior React Native Engineer",
+      "location": "Remote (Emirate of Sharjah)",
+      "startDate": "2024-01",
+      "endDate": "2025-04",
+      "highlights": [
+        "Optimized a cross‑platform React Native app for air‑purification devices and reduced legacy bugs by ~90% through targeted debugging and refactoring.",
+        "Designed and implemented native modules in Java and Swift where low‑level communication required performance beyond the JS bridge.",
+        "Improved Wi‑Fi/TCP stability and response time for reliable real‑time device control.",
+        "Enhanced UI/UX flows and added support for multiple purifier models.",
+        "Managed versioning, testing, and deployments to Google Play and the Apple App Store."
+      ],
+      "id": "dp-lamp"
+    },
+    {
+      "company": "Emzano (Tejarat Bank)",
+      "position": "Senior React Native Engineer",
+      "location": "Tehran",
+      "startDate": "2022-05",
+      "endDate": "2023-11",
+      "highlights": [
+        "Implemented and secured a React Native application for document signing and digital‑certificate management, integrating internal SDKs for authentication, CSR generation, and multi‑label PDF signing.",
+        "Developed custom Native Modules in Java and Swift for secure user authentication (Enroll class) and digital signature processing (SignPDF class).",
+        "Built a dedicated security module capable of detecting rooted devices and emulator environments with up to ~90% accuracy, preventing unauthorized app access.",
+        "Directed mobile release pipelines, versioning, and production deployments for Android and iOS, enforcing robust runtime security and data‑integrity checks."
+      ],
+      "id": "emzano"
+    },
+    {
+      "company": "Taghvim",
+      "position": "Senior React Native Engineer",
+      "location": "Remote (France)",
+      "startDate": "2021-01",
+      "endDate": "2022-03",
+      "highlights": [
+        "Developed a cross‑platform calendar and note‑taking application with smooth day‑turning animations similar to a real book.",
+        "Implemented day navigation using Android ViewPager and iOS UIPageViewController, achieving native‑level smoothness in page transitions.",
+        "Integrated WatermelonDB for efficient event and note management with near‑instant data updates.",
+        "Optimized application performance by ~95%, eliminating lags and ensuring seamless user experience across devices.",
+        "Implemented unit testing with Jest, enhancing debugging efficiency and maintaining stable releases."
+      ],
+      "id": "taghvim"
+    },
+    {
+      "company": "Behpardazan",
+      "position": "React Native Developer",
+      "location": "Tehran",
+      "startDate": "2019-01",
+      "endDate": "2021-11",
+      "highlights": [
+        "Developed cross-platform web and mobile applications using React and React Native for e-commerce, food delivery, messaging, and network marketing platforms.",
+        "Developed applications from planning to production deployment in Agile teams using Trello.",
+        "Owned production bug fixes using Firebase Crashlytics and Firebase Performance Monitoring.",
+        "Delivered over-the-air updates with Microsoft CodePush.",
+        "Migrated legacy React and React Native projects to newer framework versions."
+      ],
+      "id": "behpardazan"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Mobile Platform",
+      "keywords": [
+        "React Native",
+        "Expo",
+        "Cross-platform Architecture",
+        "Offline-first",
+        "SQLite",
+        "Sync Engines",
+        "Background Workers"
+      ]
+    },
+    {
+      "name": "Native & Performance",
+      "keywords": [
+        "Native Modules",
+        "Java",
+        "Swift",
+        "Objective-C",
+        "Bridge Optimization",
+        "Performance Profiling",
+        "Memory Optimization",
+        "Reanimated",
+        "Skia"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "State Management",
+        "Accessibility"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "Docker",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI",
+        "Fastlane",
+        "Google Play Console",
+        "App Store Connect",
+        "Microsoft CodePush",
+        "Firebase"
+      ]
+    },
+    {
+      "name": "Testing",
+      "keywords": [
+        "Jest",
+        "Detox",
+        "Maestro",
+        "Integration Testing",
+        "E2E Testing"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Pooyesh University of Qom — Qom, Iran",
+      "area": "Software Engineering",
+      "studyType": "Master of Science (M.Sc.)"
+    }
+  ],
+  "projects": [
+    {
+      "id": "dp-lamp",
+      "title": "Dp-Lamp",
+      "description": "Cross-platform air-purifier application with native modules and real-time device control.",
+      "type": "mobile",
+      "technologies": [
+        "React Native",
+        "Java",
+        "Swift",
+        "Wi-Fi",
+        "TCP"
+      ]
+    },
+    {
+      "id": "emzano",
+      "title": "Emzano",
+      "description": "Document signing and digital-certificate management application for Tejarat Bank.",
+      "type": "mobile",
+      "technologies": [
+        "React Native",
+        "Java",
+        "Swift"
+      ]
+    },
+    {
+      "id": "taghvim",
+      "title": "Taghvim",
+      "description": "Cross-platform calendar and note-taking application with native page transitions and offline data management.",
+      "type": "mobile",
+      "technologies": [
+        "React Native",
+        "WatermelonDB",
+        "Jest"
+      ]
+    }
+  ]
+}

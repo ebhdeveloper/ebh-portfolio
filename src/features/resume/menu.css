@@ -1,0 +1,13 @@
+@layer components {
+  .cv-menu { position: relative; font-size: var(--text-caption); }
+  .cv-menu summary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: var(--spacing-control-icon); padding-inline: 1rem; border-radius: var(--radius-control); cursor: pointer; list-style: none; }
+  .cv-menu summary::-webkit-details-marker { display: none; }
+  .cv-menu summary svg { width: 1rem; height: 1rem; transition: transform var(--default-transition-duration); }
+  .cv-menu[open] summary { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+  .cv-menu[open] summary svg { transform: rotate(180deg); }
+  .cv-menu ul { position: absolute; z-index: 40; inset-inline-end: 0; top: calc(100% + 0.75rem); width: 12rem; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-input); background: var(--surface); box-shadow: var(--shadow-card), var(--glow-accent); }
+  .cv-menu li a { display: flex; justify-content: space-between; align-items: center; min-height: 2.75rem; padding-inline: 0.75rem; border-radius: 0.5rem; color: var(--foreground); }
+  .cv-menu li a:hover, .cv-menu li a:focus-visible { background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
+  @media(max-width: 600px) { .cv-menu summary { padding-inline: 0.5rem; } }
+  @media(prefers-reduced-motion: reduce) { .cv-menu summary svg { transition: none; } }
+}

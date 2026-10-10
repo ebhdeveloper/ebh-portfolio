@@ -48,5 +48,10 @@
     "contactDescription": "Have a product in mind? Let's talk about what it could become.",
     "footer": "Built with care, one detail at a time.",
     "technologies": "Technologies"
+  },
+  "NotFound": {
+    "title": "This page could not be found.",
+    "description": "The address may have changed. You can return to the portfolio to explore my work.",
+    "return": "Back to portfolio"
   }
 }

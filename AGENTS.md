@@ -16,3 +16,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Use the shared typography, spacing, radius, and motion tokens. Add tokens only for repeated design decisions; avoid creating unused components.
 - Support light/dark themes, Persian/English fonts, logical direction utilities, keyboard focus, and reduced motion in new UI.
 - See `docs/design-system.md` for current values, examples, and the boundaries of this foundation.
+
+## Architecture
+
+- Keep route files in `src/app/[locale]/` thin. Portfolio-specific sections and presentation logic belong in `src/features/portfolio/`.
+- Resume JSON is canonical professional data. Consume the validated loader in `src/lib/resume/`; do not duplicate resume records in components, translations, or stores.
+- Interface translations belong in `src/messages/`. English resume content must retain `lang="en"` and `dir="ltr"` on the Persian page.
+- Prefer Server Components. Use client boundaries only for real interactions; create Zustand stores per component/provider instance to prevent shared server state.
+- Sort a copy of merged work in the presentation layer; preserve loader deduplication precedence and canonical source order.
+- Enumerate supported project link kinds; optional links and images must not produce dead controls.
+- Read `docs/architecture.md` before adding a new feature. PDF export is a separate future feature consuming the same validated resumes.

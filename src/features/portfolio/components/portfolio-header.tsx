@@ -4,6 +4,7 @@ import { ResumeMenu } from '@/features/resume/components/resume-menu';
 import { resumeProfiles } from '@/features/resume/model/presentation';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { LanguageSwitch } from '@/components/ui/language-switch';
+import { BrandMark } from '@/components/ui/brand-mark';
 
 export async function PortfolioHeader() {
   const t = await getTranslations('Portfolio');
@@ -22,7 +23,7 @@ export async function PortfolioHeader() {
           lang="en"
           dir="ltr"
         >
-          Ebh
+          <BrandMark className="pf-header-mark" />
         </a>
         <nav className="pf-nav" aria-label={t('navigation')}>
           <a href="#work">{t('work')}</a>

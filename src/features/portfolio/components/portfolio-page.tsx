@@ -1,4 +1,7 @@
-import { buildPortfolio, getResume } from '@/lib/resume/load';
+import { getLocale } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { buildPortfolio, getResume, localizeResume } from '@/lib/resume/load';
 import { PortfolioHeader } from './portfolio-header';
 import { HeroSection } from './hero-section';
 import { ProjectsSection } from './projects-section';
@@ -6,9 +9,11 @@ import { ExperienceSection } from './experience-section';
 import { ContactSection } from './contact-section';
 import { sortWorkByStartDate } from '../model/presentation';
 
-export function PortfolioPage() {
-  const { basics } = getResume('react');
-  const { projects, work } = buildPortfolio();
+export async function PortfolioPage() {
+  const currentLocale = await getLocale();
+  const locale = hasLocale(routing.locales, currentLocale) ? currentLocale : routing.defaultLocale;
+  const portfolio = buildPortfolio();
+  const { basics, projects, work } = localizeResume({ ...getResume('react'), ...portfolio }, locale);
   return (
     <div className="pf-shell">
       <PortfolioHeader />

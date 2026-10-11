@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Ebrahim Hamidi",
-    "label": "Senior Frontend Developer",
+    "label": "Senior React Native Engineer",
     "email": "ebh.developer@gmail.com",
     "url": "https://github.com/ebhdeveloper",
     "linkedin": "https://linkedin.com/in/ebrahimhamidi",
@@ -9,6 +9,16 @@
     "location": {
       "city": "Tehran",
       "countryCode": "IR"
+    },
+    "translations": {
+      "fa": {
+        "name": "ابراهیم حمیدی",
+        "location": {
+          "city": "تهران"
+        },
+        "label": "توسعه‌دهندهٔ ارشد ریکت نیتیو",
+        "summary": "توسعه‌دهندهٔ ارشد ریکت نیتیو با بیش از ۷ سال تجربه در ساخت اپلیکیشن‌های موبایل مقیاس‌پذیر. دارای سابقهٔ توسعهٔ نیتیو اندروید با Java و آی‌اواس؛ با تمرکز فعلی روی React Native و TypeScript. تجربهٔ ساخت محصولات در حوزه‌های تجارت الکترونیک، اینترنت اشیا، امضای دیجیتال و خدمات. علاقه‌مند به رابط‌های کاربری پیچیده، معماری مبتنی بر استفادهٔ آفلاین و سیستم‌های موبایل امن و قابل اتکا."
+      }
     }
   },
   "work": [
@@ -22,7 +32,19 @@
         "Led performance optimization efforts, improving rendering efficiency, reducing re‑render bottlenecks, and implementing advanced state‑management patterns for large datasets and high‑frequency UI updates.",
         "Enhanced analytics and reporting flows by defining filtering, sorting, and data‑processing logic that improved usability and reduced load time across internal operational tools."
       ],
-      "id": "namarang"
+      "id": "namarang",
+      "translations": {
+        "fa": {
+          "company": "نامارنگ",
+          "position": "توسعه‌دهندهٔ ارشد ریکت با نکست‌جی‌اس",
+          "location": "تهران",
+          "highlights": [
+            "طراحی معماری و توسعهٔ داشبوردهای پیچیده و داده‌محور با React، TypeScript، Redux و AG Grid؛ طراحی ساختارهای قابل توسعهٔ جدول و الگوهای تعامل مشابه DevExtreme برای فرایندهای تولید و تبلیغات.",
+            "هدایت بهینه‌سازی عملکرد، افزایش کارایی رندر، کاهش گلوگاه‌های رندر مجدد و پیاده‌سازی الگوهای پیشرفتهٔ مدیریت وضعیت برای داده‌های حجیم و به‌روزرسانی‌های پرتکرار رابط کاربری.",
+            "بهبود تحلیل و گزارش‌گیری با تعریف منطق فیلتر، مرتب‌سازی و پردازش داده که استفاده از ابزارهای عملیاتی داخلی را آسان‌تر و زمان بارگذاری را کمتر کرد."
+          ]
+        }
+      }
     },
     {
       "company": "Dp-Lamp",
@@ -37,7 +59,21 @@
         "Enhanced UI/UX flows and added support for multiple purifier models.",
         "Managed versioning, testing, and deployments to Google Play and the Apple App Store."
       ],
-      "id": "dp-lamp"
+      "id": "dp-lamp",
+      "translations": {
+        "fa": {
+          "company": "دی‌پی‌لمپ",
+          "position": "توسعه‌دهندهٔ ارشد ریکت نیتیو",
+          "location": "دورکاری؛ امارت شارجه",
+          "highlights": [
+            "بهینه‌سازی اپلیکیشن چندسکویی کنترل دستگاه‌های تصفیهٔ هوا با React Native و کاهش حدود ۹۰٪ از خطاهای نسخهٔ قدیمی با اشکال‌زدایی هدفمند و بازآرایی کد.",
+            "طراحی و پیاده‌سازی ماژول‌های نیتیو با Java و Swift برای ارتباطات سطح پایین که به عملکردی فراتر از پل جاوااسکریپت نیاز داشتند.",
+            "بهبود پایداری ارتباط Wi-Fi و TCP و زمان پاسخ برای کنترل قابل اتکای دستگاه‌ها به‌صورت زنده.",
+            "بهبود فرایندهای رابط و تجربهٔ کاربری و افزودن پشتیبانی از مدل‌های مختلف دستگاه تصفیهٔ هوا.",
+            "مدیریت نسخه‌بندی، تست و انتشار اپلیکیشن در گوگل پلی و اپ استور."
+          ]
+        }
+      }
     },
     {
       "company": "Emzano (Tejarat Bank)",
@@ -51,7 +87,20 @@
         "Built a dedicated security module capable of detecting rooted devices and emulator environments with up to ~90% accuracy, preventing unauthorized app access.",
         "Directed mobile release pipelines, versioning, and production deployments for Android and iOS, enforcing robust runtime security and data‑integrity checks."
       ],
-      "id": "emzano"
+      "id": "emzano",
+      "translations": {
+        "fa": {
+          "company": "امضانو؛ بانک تجارت",
+          "position": "توسعه‌دهندهٔ ارشد ریکت نیتیو",
+          "location": "تهران",
+          "highlights": [
+            "پیاده‌سازی و ایمن‌سازی اپلیکیشن React Native برای امضای اسناد و مدیریت گواهی دیجیتال؛ اتصال SDKهای داخلی برای احراز هویت، تولید درخواست گواهی CSR و امضای چندبرچسبی فایل PDF.",
+            "توسعهٔ ماژول‌های نیتیو اختصاصی با Java و Swift برای احراز هویت امن کاربر با کلاس Enroll و پردازش امضای دیجیتال با کلاس SignPDF.",
+            "ساخت ماژول امنیتی اختصاصی برای تشخیص دستگاه‌های روت‌شده و محیط‌های شبیه‌ساز با دقت تا حدود ۹۰٪ و جلوگیری از دسترسی غیرمجاز به اپلیکیشن.",
+            "هدایت فرایندهای انتشار، نسخه‌بندی و استقرار اندروید و آی‌اواس همراه با کنترل‌های امنیتی هنگام اجرا و بررسی یکپارچگی داده."
+          ]
+        }
+      }
     },
     {
       "company": "Taghvim",
@@ -66,7 +115,21 @@
         "Optimized application performance by ~95%, eliminating lags and ensuring seamless user experience across devices.",
         "Implemented unit testing with Jest, enhancing debugging efficiency and maintaining stable releases."
       ],
-      "id": "taghvim"
+      "id": "taghvim",
+      "translations": {
+        "fa": {
+          "company": "تقویم",
+          "position": "توسعه‌دهندهٔ ارشد ریکت نیتیو",
+          "location": "دورکاری؛ فرانسه",
+          "highlights": [
+            "توسعهٔ اپلیکیشن چندسکویی تقویم و یادداشت با انیمیشن‌های روان ورق‌زدن روزها، مشابه ورق‌زدن یک کتاب واقعی.",
+            "پیاده‌سازی جابه‌جایی روزها با ViewPager در اندروید و UIPageViewController در آی‌اواس برای دستیابی به انتقال‌های روان در سطح نیتیو.",
+            "استفاده از WatermelonDB برای مدیریت کارآمد رویدادها و یادداشت‌ها با به‌روزرسانی تقریباً آنی داده‌ها.",
+            "بهینه‌سازی عملکرد اپلیکیشن حدود ۹۵٪، رفع کندی‌ها و فراهم کردن تجربهٔ استفادهٔ روان در دستگاه‌های مختلف.",
+            "پیاده‌سازی تست واحد با Jest برای بهبود اشکال‌زدایی و حفظ پایداری نسخه‌های منتشرشده."
+          ]
+        }
+      }
     },
     {
       "company": "Behpardazan",
@@ -81,7 +144,21 @@
         "Delivered over-the-air updates with Microsoft CodePush.",
         "Migrated legacy React and React Native projects to newer framework versions."
       ],
-      "id": "behpardazan"
+      "id": "behpardazan",
+      "translations": {
+        "fa": {
+          "company": "بهپردازان",
+          "position": "توسعه‌دهندهٔ ریکت نیتیو",
+          "location": "تهران",
+          "highlights": [
+            "توسعهٔ اپلیکیشن‌های چندسکویی وب و موبایل با React و React Native برای فروشگاه‌های آنلاین، سفارش غذا، پیام‌رسانی و بازاریابی شبکه‌ای.",
+            "توسعهٔ اپلیکیشن‌ها از برنامه‌ریزی تا انتشار در تیم‌های چابک با استفاده از Trello.",
+            "مسئولیت رفع خطاهای نسخهٔ عملیاتی با Firebase Crashlytics و Firebase Performance Monitoring.",
+            "ارائهٔ به‌روزرسانی‌های مستقیم اپلیکیشن با Microsoft CodePush.",
+            "ارتقای پروژه‌های قدیمی React و React Native به نسخه‌های جدیدتر فریم‌ورک."
+          ]
+        }
+      }
     }
   ],
   "skills": [
@@ -95,7 +172,12 @@
         "SQLite",
         "Sync Engines",
         "Background Workers"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "توسعهٔ موبایل"
+        }
+      }
     },
     {
       "name": "Native & Performance",
@@ -109,7 +191,12 @@
         "Memory Optimization",
         "Reanimated",
         "Skia"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "نیتیو و عملکرد"
+        }
+      }
     },
     {
       "name": "Frontend",
@@ -119,7 +206,12 @@
         "React",
         "State Management",
         "Accessibility"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "فرانت‌اند"
+        }
+      }
     },
     {
       "name": "Infrastructure",
@@ -135,7 +227,12 @@
         "App Store Connect",
         "Microsoft CodePush",
         "Firebase"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "زیرساخت"
+        }
+      }
     },
     {
       "name": "Testing",
@@ -145,14 +242,26 @@
         "Maestro",
         "Integration Testing",
         "E2E Testing"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "تست"
+        }
+      }
     }
   ],
   "education": [
     {
       "institution": "Pooyesh University of Qom — Qom, Iran",
       "area": "Software Engineering",
-      "studyType": "Master of Science (M.Sc.)"
+      "studyType": "Master of Science (M.Sc.)",
+      "translations": {
+        "fa": {
+          "institution": "دانشگاه پویش قم؛ قم، ایران",
+          "area": "مهندسی نرم‌افزار",
+          "studyType": "کارشناسی ارشد"
+        }
+      }
     }
   ],
   "projects": [
@@ -167,7 +276,13 @@
         "Swift",
         "Wi-Fi",
         "TCP"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "title": "دی‌پی‌لمپ",
+          "description": "اپلیکیشن چندسکویی تصفیهٔ هوا با ماژول‌های نیتیو و کنترل زندهٔ دستگاه."
+        }
+      }
     },
     {
       "id": "emzano",
@@ -178,7 +293,13 @@
         "React Native",
         "Java",
         "Swift"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "title": "امضانو",
+          "description": "اپلیکیشن امضای اسناد و مدیریت گواهی دیجیتال برای بانک تجارت."
+        }
+      }
     },
     {
       "id": "taghvim",
@@ -189,7 +310,13 @@
         "React Native",
         "WatermelonDB",
         "Jest"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "title": "تقویم",
+          "description": "اپلیکیشن چندسکویی تقویم و یادداشت با جابه‌جایی نیتیو صفحات و مدیریت آفلاین داده."
+        }
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 import type { PortfolioProject, WorkExperience } from "../../../lib/resume/types";
 
-export function sortWorkByStartDate(work: readonly WorkExperience[]) {
+export function sortWorkByStartDate<T extends WorkExperience>(work: readonly T[]) {
   return [...work].sort((a, b) => b.startDate.localeCompare(a.startDate));
 }
 

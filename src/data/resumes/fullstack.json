@@ -7,6 +7,14 @@
     "location": {
       "city": "Tehran",
       "countryCode": "IR"
+    },
+    "translations": {
+      "fa": {
+        "name": "ابراهیم حمیدی",
+        "location": {
+          "city": "تهران"
+        }
+      }
     }
   },
   "work": [],

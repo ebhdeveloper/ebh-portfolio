@@ -60,6 +60,7 @@
   .pf-project-shape { position: absolute; width: 20rem; height: 20rem; top: -6rem; inset-inline-end: -6rem; border: 3.5rem solid color-mix(in srgb, var(--accent) 18%, transparent); border-radius: 50%; transition: transform 600ms var(--ease-smooth); }
   .pf-project-art[data-art="wonderfruit"] .pf-project-shape { width: 14rem; height: 18rem; top: 0; inset-inline-end: 5%; border: 0; border-radius: 50% 50% 30% 30%; background: color-mix(in srgb, var(--accent) 30%, var(--artwork)); transform: rotate(35deg); }
   .pf-project-art[data-platform="mobile"] .pf-project-shape { top: 14%; inset-inline-end: calc(50% - 5rem); width: 10rem; height: 19rem; border-radius: 2rem; border-width: 0.65rem; transform: rotate(15deg); }
+  .pf-project-abstract > span:first-of-type:lang(fa) { font-family: var(--font-iran-sans), sans-serif; letter-spacing: 0; }
   .pf-art-caption { position: absolute; bottom: 1.5rem; inset-inline-start: 1.5rem; font-family: var(--font-montserrat), sans-serif; font-size: 0.625rem; letter-spacing: 0.14em; color: var(--foreground); }
   .pf-platform { position: absolute; top: 1rem; inset-inline-start: 1rem; z-index: 1; padding: 0.4rem 0.75rem; background: var(--gradient-panel); backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: var(--radius-control); color: var(--foreground); font-size: 0.75rem; }
   .pf-project-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-block: 1.25rem 0.75rem; }

@@ -3,7 +3,7 @@ import type { PortfolioProject } from "../../../lib/resume/types";
 
 export type ProjectFilter = "all" | "web" | "mobile";
 
-export function filterProjects(projects: readonly PortfolioProject[], filter: ProjectFilter) {
+export function filterProjects<T extends PortfolioProject>(projects: readonly T[], filter: ProjectFilter) {
   return filter === "all"
     ? projects
     : projects.filter((project) => project.type === filter || project.type === "both");

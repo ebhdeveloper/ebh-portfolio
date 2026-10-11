@@ -21,3 +21,21 @@ describe("resume PDF download", () => {
     }
   });
 });
+
+
+describe("localized PDF downloads", () => {
+  it("returns Persian PDFs for all profiles with separate filenames and language headers", async () => {
+    for (const profile of ["react", "react-native", "fullstack"]) {
+      const response = await getPdfResponse(profile, "fa");
+      expect(response.status).toBe(200);
+      expect(response.headers.get("Content-Language")).toBe("fa");
+      expect(response.headers.get("Content-Disposition")).toBe(`attachment; filename="Ebrahim-Hamidi-${profile}-CV-fa.pdf"`);
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      expect(new TextDecoder().decode(bytes.slice(0, 5))).toBe("%PDF-");
+      expect(bytes.length).toBeGreaterThan(5000);
+    }
+  }, 30000);
+  it("rejects unsupported language parameters", async () => {
+    expect((await getPdfResponse("react", "de")).status).toBe(400);
+  });
+});

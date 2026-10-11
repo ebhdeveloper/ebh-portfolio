@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { useFormatter, useTranslations } from "next-intl";
 import { useStore } from "zustand";
-import type { PortfolioProject } from "@/lib/resume/types";
+import type { PortfolioProject, ResumeLocale } from "@/lib/resume/types";
 import { createProjectFilterStore, filterProjects, type ProjectFilter } from "../model/project-filter";
 import { ProjectCard } from "./project-card";
 
 const filters: readonly ProjectFilter[] = ["all", "web", "mobile"];
 
-export function ProjectsSection({ projects }: { projects: PortfolioProject[] }) {
+export function ProjectsSection({ projects }: { projects: (PortfolioProject & { locale?: ResumeLocale })[] }) {
   const t = useTranslations("Portfolio");
   const format = useFormatter();
   const [store] = useState(createProjectFilterStore);

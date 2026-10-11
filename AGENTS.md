@@ -21,7 +21,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - Keep route files in `src/app/[locale]/` thin. Portfolio-specific sections and presentation logic belong in `src/features/portfolio/`.
 - Resume JSON is canonical professional data. Consume the validated loader in `src/lib/resume/`; do not duplicate resume records in components, translations, or stores.
-- Interface translations belong in `src/messages/`. English resume content must retain `lang="en"` and `dir="ltr"` on the Persian page.
+- Interface translations belong in `src/messages/`. Resume translations live beside each record under `translations.fa`. Preserve shared IDs, dates, URLs and technology names; use `localizeResume` for presentation. Mark each record with its actual language and direction, including English fallbacks on Persian pages.
 - Prefer Server Components. Use client boundaries only for real interactions; create Zustand stores per component/provider instance to prevent shared server state.
 - Sort a copy of merged work in the presentation layer; preserve loader deduplication precedence and canonical source order.
 - Enumerate supported project link kinds; optional links and images must not produce dead controls.

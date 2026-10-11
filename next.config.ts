@@ -4,7 +4,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   serverExternalPackages: ["@react-pdf/renderer"],
   outputFileTracingIncludes: {
-    "/api/resume/*": ["./src/assets/fonts/montserrat-*.ttf"],
+    "/api/resume/*": ["./src/assets/fonts/montserrat-*.ttf", "./src/assets/fonts/iran-sans-*.ttf"],
   },
   experimental: {
     agentFeedback: true,

@@ -58,3 +58,20 @@ describe("resume document presentation", () => {
     expect(formatResumeDate()).toBe("Present");
   });
 });
+
+
+describe("bilingual document presentation", () => {
+  it("uses Persian headings, direction, dates and a language-specific filename", () => {
+    const cv = buildResumeDocument("react", getResume("react"), "fa");
+    expect(cv.locale).toBe("fa");
+    expect(cv.direction).toBe("rtl");
+    expect(cv.headings.experience).toBe("سوابق کاری");
+    expect(cv.fileName).toBe("Ebrahim-Hamidi-react-CV-fa.pdf");
+    expect(cv.work[0].period).toContain("اکنون");
+    expect(formatResumeDate("2021-01", "fa")).toBe("ژانویه ۲۰۲۱");
+  });
+  it("preserves Gregorian year-only precision in both languages", () => {
+    expect(formatResumeDate("2021", "fa")).toBe("۲۰۲۱");
+    expect(formatResumeDate("2021", "en")).toBe("2021");
+  });
+});

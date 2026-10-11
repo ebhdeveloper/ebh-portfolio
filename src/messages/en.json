@@ -65,7 +65,8 @@
     "kicker": "PROFESSIONAL BACKGROUND",
     "title": "{profile} resume",
     "description": "My experience, projects, and skills in this field. Download the PDF or print the resume.",
-    "incomplete": "This version currently contains contact information only. Experience and skills will appear when they are added to its resume JSON.",
-    "printHint": "For a PDF from the print dialog, choose Save as PDF. For a direct download, use Download PDF."
+    "incomplete": "This version currently contains contact information only. Experience and skills have not been added yet.",
+    "printHint": "For a PDF from the print dialog, choose Save as PDF. For a direct download, use Download PDF.",
+    "switchLanguage": "View resume in Persian"
   }
 }

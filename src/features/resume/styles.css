@@ -11,6 +11,10 @@
   .cv-intro > p:last-child, .cv-print-hint { color: var(--muted-foreground); line-height: 1.8; font-size: var(--text-caption); }
   .cv-notice { border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-input); background: var(--surface); color: var(--muted-foreground); margin-bottom: 1.5rem; line-height: 1.8; }
   .cv-document { max-width: 210mm; min-height: 297mm; margin-inline: auto; padding: 16mm; background: var(--resume-paper); color: var(--resume-ink); border-radius: var(--radius-input); box-shadow: var(--shadow-card); font-family: var(--font-montserrat), sans-serif; font-size: 11px; font-weight: 500; line-height: 1.7; }
+  .cv-document:lang(fa) { font-family: var(--font-iran-sans), var(--font-montserrat), sans-serif; font-weight: 400; font-size: 12px; line-height: 1.9; }
+  .cv-document :is(.cv-profile, h1, .cv-section h2):lang(fa) { letter-spacing: 0; text-transform: none; }
+  .cv-document [lang="en"] { font-family: var(--font-montserrat), sans-serif; font-weight: 500; }
+  .cv-document [lang="fa"] { font-family: var(--font-iran-sans), var(--font-montserrat), sans-serif; }
   .cv-document a { color: var(--resume-accent); overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 2px; }
   .cv-document-header { padding-bottom: 1.5rem; border-bottom: 3px solid var(--resume-accent); }
   .cv-profile { color: var(--resume-accent); text-transform: uppercase; letter-spacing: 0.12em; font-size: 9px; font-weight: 700; margin-bottom: 0.5rem; }

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowIcon } from "@/components/ui/arrow-icon";
-import type { PortfolioProject } from "@/lib/resume/types";
+import type { PortfolioProject, ResumeLocale } from "@/lib/resume/types";
 import { getProjectLinks } from "../model/presentation";
 
-export function ProjectCard({ project }: { project: PortfolioProject }) {
+export function ProjectCard({ project }: { project: PortfolioProject & { locale?: ResumeLocale } }) {
   const t = useTranslations("Portfolio");
   const links = getProjectLinks(project);
   return (
@@ -15,17 +15,17 @@ export function ProjectCard({ project }: { project: PortfolioProject }) {
         ) : (
           <div className="pf-project-abstract" aria-hidden="true">
             <div className="pf-project-shape" />
-            <span lang="en" dir="ltr">{project.title}</span>
+            <span lang={project.locale ?? "en"} dir={project.locale === "fa" ? "rtl" : "ltr"}>{project.title}</span>
             <span className="pf-art-caption">{project.type === "mobile" ? "APPLICATION" : "DIGITAL PRODUCT"}</span>
           </div>
         )}
         <span className="pf-platform">{t(project.type)}</span>
       </div>
       <div className="pf-project-heading">
-        <h3 lang="en" dir="ltr">{project.title}</h3>
+        <h3 lang={project.locale ?? "en"} dir={project.locale === "fa" ? "rtl" : "ltr"}>{project.title}</h3>
         <span className="pf-project-index" aria-hidden="true"><ArrowIcon /></span>
       </div>
-      <p className="pf-project-description" lang="en" dir="ltr">{project.description}</p>
+      <p className="pf-project-description" lang={project.locale ?? "en"} dir={project.locale === "fa" ? "rtl" : "ltr"}>{project.description}</p>
       {project.technologies.length > 0 && (
         <ul className="pf-tags" aria-label={t("technologies")} lang="en" dir="ltr">
           {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}

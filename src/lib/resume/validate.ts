@@ -56,6 +56,35 @@ function uniqueId(entry: Record<string, unknown>, path: string, seen: Set<string
   seen.add(entry.id);
 }
 
+// A translation belongs to its record; it cannot replace shared identity or dates.
+function translation(record: Record<string, unknown>, path: string, keys: string[]) {
+  if (record.translations === undefined) return;
+  const translations = object(record.translations, `${path}.translations`);
+  if (Object.keys(translations).some(key => key !== "fa")) fail(`${path}.translations`, "supports only fa (English is the base)");
+  if (translations.fa === undefined) return;
+  const translated = object(translations.fa, `${path}.translations.fa`);
+  const allowed = [...keys, ...(path === "basics" ? ["label", "summary", "location"] : []), ...(path.startsWith("work[") ? ["highlights"] : [])];
+  if (Object.keys(translated).some(key => !allowed.includes(key))) fail(`${path}.translations.fa`, "contains a non-translatable field");
+  keys.forEach(key => string(translated[key], `${path}.translations.fa.${key}`));
+  if (path === "basics") {
+    for (const key of ["label", "summary"]) {
+      if (record[key] !== undefined) string(translated[key], `${path}.translations.fa.${key}`);
+      else if (translated[key] !== undefined) fail(`${path}.translations.fa.${key}`, "has no English source");
+    }
+    const location = record.location !== undefined ? object(record.location, `${path}.location`) : undefined;
+    if (translated.location !== undefined) {
+      const translatedLocation = object(translated.location, `${path}.translations.fa.location`);
+      if (Object.keys(translatedLocation).some(key => key !== "city")) fail(`${path}.translations.fa.location`, "may translate only city");
+      if (location?.city === undefined) fail(`${path}.translations.fa.location.city`, "has no English source");
+      string(translatedLocation.city, `${path}.translations.fa.location.city`);
+    } else if (location?.city !== undefined) fail(`${path}.translations.fa.location.city`, "must translate the source city");
+  }
+  if (path.startsWith("work[")) {
+    strings(translated.highlights, `${path}.translations.fa.highlights`);
+    if ((translated.highlights as string[]).length !== (record.highlights as string[]).length) fail(`${path}.translations.fa.highlights`, "must match the English highlights count");
+  }
+}
+
 export function validateResume(input: unknown): Resume {
   const resume = object(input, "resume");
   const basics = object(resume.basics, "basics");
@@ -70,11 +99,14 @@ export function validateResume(input: unknown): Resume {
     optionalStrings(object(basics.location, "basics.location"), ["city", "countryCode"], "basics.location");
   }
 
+  translation(basics, "basics", ["name"]);
+
   const workIds = new Set<string>();
   items(resume, "work", (entry, path) => {
     uniqueId(entry, path, workIds);
     ["company", "position", "location"].forEach((key) => string(entry[key], `${path}.${key}`));
     strings(entry.highlights, `${path}.highlights`);
+    translation(entry, path, ["company", "position", "location"]);
     const [start] = dateRange(entry.startDate, `${path}.startDate`);
     if (entry.endDate !== undefined) {
       const [, end] = dateRange(entry.endDate, `${path}.endDate`);
@@ -88,6 +120,7 @@ export function validateResume(input: unknown): Resume {
     ["title", "description"].forEach((key) => string(entry[key], `${path}.${key}`));
     if (!["web", "mobile", "both"].includes(entry.type as string)) fail(`${path}.type`, "must be web, mobile or both");
     strings(entry.technologies, `${path}.technologies`);
+    translation(entry, path, ["title", "description"]);
     if (entry.links !== undefined) {
       const links = object(entry.links, `${path}.links`);
       ["website", "github", "appStore", "googlePlay"].forEach((key) => {
@@ -107,9 +140,11 @@ export function validateResume(input: unknown): Resume {
   items(resume, "skills", (entry, path) => {
     string(entry.name, `${path}.name`);
     strings(entry.keywords, `${path}.keywords`);
+    translation(entry, path, ["name"]);
   });
   items(resume, "education", (entry, path) => {
     ["institution", "area", "studyType"].forEach((key) => string(entry[key], `${path}.${key}`));
+    translation(entry, path, ["institution", "area", "studyType"]);
   });
   // The guards above check every field of the public Resume contract.
   return input as Resume;

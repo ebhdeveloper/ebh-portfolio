@@ -1,7 +1,9 @@
 import react from "../../data/resumes/react.json";
 import reactNative from "../../data/resumes/react-native.json";
 import fullstack from "../../data/resumes/fullstack.json";
-import type { Resume, ResumeProfile, ResumeSources } from "./types";
+import type { Resume, ResumeProfile, ResumeSources, ResumeLocale } from "./types";
+import { localizeResume } from "./localize";
+export { localizeResume } from "./localize";
 import { validateResume } from "./validate";
 
 const profiles = ["react", "react-native", "fullstack"] as const satisfies readonly ResumeProfile[];
@@ -29,4 +31,8 @@ export function buildPortfolio(sources: ResumeSources = defaultSources): Pick<Re
     work: uniqueById(resumes.flatMap((resume) => resume.work)),
     projects: uniqueById(resumes.flatMap((resume) => resume.projects)),
   };
+}
+
+export function getLocalizedResume(profile: string, locale: ResumeLocale, sources: ResumeSources = defaultSources) {
+  return localizeResume(getResume(profile, sources), locale);
 }

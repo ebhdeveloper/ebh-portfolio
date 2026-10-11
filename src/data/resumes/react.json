@@ -9,7 +9,17 @@
       "countryCode": "IR"
     },
     "label": "Senior React & Frontend Engineer",
-    "summary": "Senior React and Frontend Engineer with 7+ years of experience building high-performance web applications, data-intensive dashboards, and digital products. Expert in React, Next.js, TypeScript, Astro, frontend architecture, real-time interfaces, PWAs, internationalization, and automated testing. Improved rendering and load performance by up to 90% and owned products from technical design through production delivery."
+    "summary": "Senior React and Frontend Engineer with 7+ years of experience building high-performance web applications, data-intensive dashboards, and digital products. Expert in React, Next.js, TypeScript, Astro, frontend architecture, real-time interfaces, PWAs, internationalization, and automated testing. Improved rendering and load performance by up to 90% and owned products from technical design through production delivery.",
+    "translations": {
+      "fa": {
+        "name": "ابراهیم حمیدی",
+        "location": {
+          "city": "تهران"
+        },
+        "label": "توسعه‌دهندهٔ ارشد ریکت و فرانت‌اند",
+        "summary": "توسعه‌دهندهٔ ارشد ریکت و فرانت‌اند با بیش از ۷ سال تجربه در ساخت اپلیکیشن‌های وب با عملکرد بالا، داشبوردهای داده‌محور و محصولات دیجیتال. متخصص در React، Next.js، TypeScript، Astro، معماری فرانت‌اند، رابط‌های بلادرنگ، وب‌اپلیکیشن‌های پیش‌رونده، چندزبانه‌سازی و تست خودکار. بهبود عملکرد رندر و بارگذاری تا ۹۰٪ و مسئولیت توسعهٔ محصولات از طراحی فنی تا انتشار نسخهٔ نهایی."
+      }
+    }
   },
   "work": [
     {
@@ -23,7 +33,20 @@
         "Reduced initial loading and table-rendering latency by up to 90% through component refactoring, render optimization, state-management improvements, and removal of frontend bottlenecks.",
         "Built reusable enterprise data tables with server-side pagination, multi-column filtering and sorting, inline editing, grouping, dynamic columns, selection, and export.",
         "Implemented WebSocket-based updates for operational records, workflow progress, and status changes without manual refreshes."
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "company": "نامارنگ",
+          "position": "توسعه‌دهندهٔ ارشد ریکت",
+          "location": "تهران، ایران",
+          "highlights": [
+            "طراحی معماری و توسعهٔ داشبوردهای عملیاتی داده‌محور با React، Next.js، TypeScript، Redux و AG Grid.",
+            "کاهش زمان بارگذاری اولیه و تأخیر در رندر جدول‌ها تا ۹۰٪ با بازآرایی کامپوننت‌ها، بهینه‌سازی رندر، بهبود مدیریت وضعیت و رفع گلوگاه‌های فرانت‌اند.",
+            "ساخت جدول‌های سازمانی قابل استفادهٔ مجدد با صفحه‌بندی سمت سرور، فیلتر و مرتب‌سازی چندستونه، ویرایش درجا، گروه‌بندی، ستون‌های پویا، انتخاب ردیف و خروجی گرفتن.",
+            "پیاده‌سازی به‌روزرسانی زندهٔ رکوردهای عملیاتی، پیشرفت فرایندها و تغییر وضعیت‌ها با WebSocket، بدون نیاز به بارگذاری مجدد صفحه."
+          ]
+        }
+      }
     },
     {
       "id": "beyondgrow",
@@ -36,7 +59,19 @@
         "Owned the BeyondGrow product website from frontend architecture through production launch using Astro.",
         "Built a bilingual English/Thai experience and light/dark themes using localized navigation, scalable internationalization patterns, reusable design tokens, and theme-aware components.",
         "Used Astro's server-first, low-JavaScript architecture, responsive components, semantic HTML, and asset optimization to support fast loads, strong Core Web Vitals, accessibility, and SEO."
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "company": "بیاندگرو",
+          "position": "توسعه‌دهندهٔ ارشد فرانت‌اند با Astro",
+          "location": "محل همکاری مشخص نشده",
+          "highlights": [
+            "مسئولیت توسعهٔ وب‌سایت محصول BeyondGrow با Astro، از معماری فرانت‌اند تا انتشار نسخهٔ نهایی.",
+            "ساخت نسخه‌های انگلیسی و تایلندی و تم‌های روشن و تیره با مسیریابی متناسب با زبان، الگوهای قابل توسعهٔ چندزبانه، توکن‌های طراحی مشترک و کامپوننت‌های سازگار با تم.",
+            "استفاده از معماری مبتنی بر سرور و جاوااسکریپت کم در Astro، کامپوننت‌های واکنش‌گرا، HTML معنایی و بهینه‌سازی فایل‌ها برای بارگذاری سریع، بهبود Core Web Vitals، دسترس‌پذیری و سئو."
+          ]
+        }
+      }
     },
     {
       "id": "youtopin",
@@ -49,7 +84,19 @@
         "Designed and developed a complex tour-leader dashboard using React, Next.js, and TypeScript for travel operations and tour-management workflows.",
         "Improved data-heavy views by optimizing component rendering, state updates, and data-loading flows.",
         "Translated complex requirements into responsive UI patterns for forms, structured travel data, and multi-step workflows in collaboration with product and design teams."
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "company": "یوتوپین",
+          "position": "توسعه‌دهندهٔ ارشد ریکت و نکست‌جی‌اس",
+          "location": "محل همکاری مشخص نشده",
+          "highlights": [
+            "طراحی و توسعهٔ داشبورد پیچیدهٔ راهنمایان تور با React، Next.js و TypeScript برای عملیات سفر و مدیریت تور.",
+            "بهبود صفحه‌های داده‌محور با بهینه‌سازی رندر کامپوننت‌ها، به‌روزرسانی وضعیت و فرایندهای بارگذاری داده.",
+            "تبدیل نیازمندی‌های پیچیده به رابط‌های واکنش‌گرا برای فرم‌ها، داده‌های ساختاریافتهٔ سفر و فرایندهای چندمرحله‌ای، با همکاری تیم‌های محصول و طراحی."
+          ]
+        }
+      }
     },
     {
       "id": "simkhan",
@@ -63,7 +110,20 @@
         "Improved performance across data-heavy pages by optimizing rendering, data fetching, component structure, and asset delivery.",
         "Built advanced filtering across operator, prefix, SIM type, condition, payment method, seller type, and vanity-number patterns.",
         "Enhanced Progressive Web App capabilities and added automated tests for critical components and business workflows."
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "company": "سیم‌خان",
+          "position": "توسعه‌دهندهٔ ارشد ریکت و نکست‌جی‌اس",
+          "location": "تهران، ایران",
+          "highlights": [
+            "هدایت بازطراحی کامل بازار آنلاین پربازدید سیم‌کارت با React، Next.js و TypeScript و نوسازی فرایندهای جست‌وجو، نمایش آگهی، فروشندگی و خرید.",
+            "بهبود عملکرد صفحه‌های داده‌محور با بهینه‌سازی رندر، دریافت داده، ساختار کامپوننت‌ها و ارائهٔ فایل‌ها.",
+            "ساخت فیلترهای پیشرفته بر اساس اپراتور، پیش‌شماره، نوع و وضعیت سیم‌کارت، روش پرداخت، نوع فروشنده و الگوهای شمارهٔ رند.",
+            "بهبود قابلیت‌های وب‌اپلیکیشن پیش‌رونده و افزودن تست‌های خودکار برای کامپوننت‌ها و فرایندهای کلیدی کسب‌وکار."
+          ]
+        }
+      }
     }
   ],
   "projects": [
@@ -77,6 +137,12 @@
       ],
       "links": {
         "website": "https://beyondgrow.app/"
+      },
+      "translations": {
+        "fa": {
+          "title": "بیاندگرو",
+          "description": "وب‌سایت محصول به دو زبان انگلیسی و تایلندی با تم روشن و تیره؛ توسعه از معماری فرانت‌اند تا انتشار."
+        }
       }
     },
     {
@@ -91,6 +157,12 @@
       ],
       "links": {
         "website": "https://youtopin.app/"
+      },
+      "translations": {
+        "fa": {
+          "title": "یوتوپین",
+          "description": "داشبورد راهنمایان تور برای عملیات سفر و فرایندهای مدیریت تور."
+        }
       }
     },
     {
@@ -105,6 +177,12 @@
       ],
       "links": {
         "website": "https://simkhan.ir/"
+      },
+      "translations": {
+        "fa": {
+          "title": "سیم‌خان",
+          "description": "بازطراحی بازار آنلاین سیم‌کارت با جست‌وجو و فیلترهای پیشرفته و قابلیت‌های وب‌اپلیکیشن پیش‌رونده."
+        }
       }
     },
     {
@@ -115,6 +193,12 @@
       "technologies": [],
       "links": {
         "website": "https://wonderfruit.co/"
+      },
+      "translations": {
+        "fa": {
+          "title": "واندرفروت",
+          "description": "همکاری در توسعهٔ وب‌سایت Wonderfruit به‌عنوان توسعه‌دهنده در کنار تیم پروژه."
+        }
       }
     }
   ],
@@ -129,7 +213,12 @@
         "JavaScript",
         "HTML5",
         "CSS3"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "زبان‌ها و فریم‌ورک‌ها"
+        }
+      }
     },
     {
       "name": "Architecture & Data",
@@ -142,7 +231,12 @@
         "WebSocket",
         "REST APIs",
         "Server-Side Pagination"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "معماری و داده"
+        }
+      }
     },
     {
       "name": "Performance & Quality",
@@ -157,7 +251,12 @@
         "Jest",
         "Integration Testing",
         "E2E Testing"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "عملکرد و کیفیت"
+        }
+      }
     },
     {
       "name": "Delivery & Infrastructure",
@@ -169,14 +268,26 @@
         "GitHub Actions",
         "GitLab CI",
         "Firebase"
-      ]
+      ],
+      "translations": {
+        "fa": {
+          "name": "انتشار و زیرساخت"
+        }
+      }
     }
   ],
   "education": [
     {
       "institution": "Pooyesh University of Qom — Qom, Iran",
       "area": "Software Engineering",
-      "studyType": "Master of Science (M.Sc.)"
+      "studyType": "Master of Science (M.Sc.)",
+      "translations": {
+        "fa": {
+          "institution": "دانشگاه پویش قم؛ قم، ایران",
+          "area": "مهندسی نرم‌افزار",
+          "studyType": "کارشناسی ارشد"
+        }
+      }
     }
   ]
 }

@@ -1,6 +1,11 @@
+export type ResumeLocale = "en" | "fa";
+
+export type ResumeTranslations<T> = { fa?: T };
+
 export type ResumeProfile = "react" | "react-native" | "fullstack";
 
 export interface ResumeBasics {
+  translations?: ResumeTranslations<{ name: string; label?: string; summary?: string; location?: { city?: string } }>;
   name: string;
   email: string;
   label?: string;
@@ -11,6 +16,7 @@ export interface ResumeBasics {
 }
 
 export interface WorkExperience {
+  translations?: ResumeTranslations<{ company: string; position: string; location: string; highlights: string[] }>;
   id: string;
   company: string;
   position: string;
@@ -21,6 +27,7 @@ export interface WorkExperience {
 }
 
 export interface PortfolioProject {
+  translations?: ResumeTranslations<{ title: string; description: string }>;
   id: string;
   title: string;
   description: string;
@@ -36,11 +43,13 @@ export interface PortfolioProject {
 }
 
 export interface SkillGroup {
+  translations?: ResumeTranslations<{ name: string }>;
   name: string;
   keywords: string[];
 }
 
 export interface Education {
+  translations?: ResumeTranslations<{ institution: string; area: string; studyType: string }>;
   institution: string;
   area: string;
   studyType: string;

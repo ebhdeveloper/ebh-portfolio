@@ -8,7 +8,7 @@ export function ProjectCard({ project }: { project: PortfolioProject & { locale?
   const t = useTranslations("Portfolio");
   const links = getProjectLinks(project);
   return (
-    <article className="pf-project">
+    <article className="pf-project" data-scroll-reveal="">
       <div className="pf-project-art" data-art={project.id} data-platform={project.type}>
         {project.image ? (
           <Image className="pf-project-image" src={project.image} alt={project.title} width={800} height={600} unoptimized />

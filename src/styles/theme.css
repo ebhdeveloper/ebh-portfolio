@@ -38,6 +38,8 @@
   --text-caption: 0.875rem;
   --text-caption--line-height: 1.7;
   --motion-enter: 700ms;
+  --motion-reveal: 800ms;
+  --motion-reveal-stagger: 100ms;
   --motion-orbit: 28s;
   --motion-float: 7s;
   --motion-glow: 10s;

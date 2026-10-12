@@ -28,6 +28,11 @@ describe("portfolio presentation", () => {
     ]);
   });
 
+  it("exposes Cafe Bazaar downloads as their own link kind", () => {
+    const project = makeProject({ links: { cafeBazaar: "https://cafebazaar.ir/app/com.example" } });
+    expect(getProjectLinks(project)).toEqual([{ kind: "cafeBazaar", url: "https://cafebazaar.ir/app/com.example" }]);
+  });
+
   it("allows projects with no public links", () => {
     expect(getProjectLinks(makeProject())).toEqual([]);
     expect(getProjectLinks(makeProject({ links: {} }))).toEqual([]);

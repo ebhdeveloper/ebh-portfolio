@@ -1,5 +1,5 @@
 import { localizeResume } from "../../../lib/resume/localize";
-import type { Resume, ResumeProfile, ResumeLocale } from "../../../lib/resume/types";
+import { projectLinkKinds, type Resume, type ResumeProfile, type ResumeLocale } from "../../../lib/resume/types";
 
 export const resumeProfiles = [
   { id: "react", label: "React" },
@@ -20,8 +20,8 @@ export function formatResumeDate(value?: string, locale: ResumeLocale = "en") {
 }
 
 const labels = {
-  en: { curriculum: "Curriculum vitae", profile: "Profile", expertise: "Expertise", experience: "Experience", projects: "Selected projects", education: "Education", resume: "resume", website: "Website", github: "Source", appStore: "App Store", googlePlay: "Google Play" },
-  fa: { curriculum: "رزومهٔ حرفه‌ای", profile: "معرفی", expertise: "مهارت‌ها", experience: "سوابق کاری", projects: "پروژه‌های منتخب", education: "تحصیلات", resume: "رزومه", website: "وب‌سایت", github: "کد پروژه", appStore: "اپ استور", googlePlay: "گوگل پلی" },
+  en: { curriculum: "Curriculum vitae", profile: "Profile", expertise: "Expertise", experience: "Experience", projects: "Selected projects", education: "Education", resume: "resume", website: "Website", github: "Source", appStore: "App Store", googlePlay: "Google Play", cafeBazaar: "Cafe Bazaar" },
+  fa: { curriculum: "رزومهٔ حرفه‌ای", profile: "معرفی", expertise: "مهارت‌ها", experience: "سوابق کاری", projects: "پروژه‌های منتخب", education: "تحصیلات", resume: "رزومه", website: "وب‌سایت", github: "کد پروژه", appStore: "اپ استور", googlePlay: "گوگل پلی", cafeBazaar: "کافه‌بازار" },
 } as const;
 
 // The supplied font lacks some non-ASCII hyphens. Keep the canonical JSON intact.
@@ -54,7 +54,7 @@ export function buildResumeDocument(profile: ResumeProfile, source: Resume, loca
       title: text(project.title),
       description: text(project.description),
       technologies: project.technologies.map(text),
-      links: (["website", "github", "appStore", "googlePlay"] as const).flatMap(kind => {
+      links: projectLinkKinds.flatMap(kind => {
         const url = project.links?.[kind];
         return url ? [{ label: headings[kind], url }] : [];
       }),

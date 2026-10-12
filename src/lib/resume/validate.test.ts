@@ -77,6 +77,7 @@ describe("validateResume", () => {
   it.each([
     ["type", "desktop"], ["title", ""], ["description", null], ["technologies", [false]],
     ["links", []], ["links", { website: "javascript:alert(1)" }],
+    ["links", { cafeBazaar: "javascript:alert(1)" }], ["links", { cafeBazaar: "not-a-url" }],
     ["links", { appStore: "not-a-url" }], ["links", { github: "ftp://example.com" }],
   ])("rejects invalid project %s", (key, value) => {
     const input = { ...makeResume(), projects: [{ ...makeProject(), [key]: value }] };

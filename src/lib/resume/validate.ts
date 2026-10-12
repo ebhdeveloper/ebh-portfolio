@@ -1,4 +1,4 @@
-import type { Resume } from "./types";
+import { projectLinkKinds, type Resume } from "./types";
 
 function fail(path: string, message: string): never {
   throw new Error(`Invalid resume: ${path} ${message}`);
@@ -123,7 +123,7 @@ export function validateResume(input: unknown): Resume {
     translation(entry, path, ["title", "description"]);
     if (entry.links !== undefined) {
       const links = object(entry.links, `${path}.links`);
-      ["website", "github", "appStore", "googlePlay"].forEach((key) => {
+      projectLinkKinds.forEach((key) => {
         if (links[key] !== undefined) url(links[key], `${path}.links.${key}`);
       });
     }

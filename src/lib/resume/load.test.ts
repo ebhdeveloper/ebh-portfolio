@@ -116,16 +116,21 @@ describe("actual resume JSON files", () => {
   });
 
   it("contains the supplied real projects and preserves native metrics", () => {
-    expect(getResume("react").projects.map(({ id }) => id)).toEqual(["beyondgrow", "youtopin", "simkhan", "wonderfruit"]);
+    expect(getResume("react").projects.map(({ id }) => id)).toEqual(expect.arrayContaining(["beyondgrow", "youtopin", "simkhan", "wonderfruit"]));
     const native = getResume("react-native");
     expect(native.work.map(({ id }) => id)).toEqual(["namarang", "dp-lamp", "emzano", "taghvim", "behpardazan"]);
     expect(native.work.find(({ id }) => id === "taghvim")?.highlights).toContain("Optimized application performance by ~95%, eliminating lags and ensuring seamless user experience across devices.");
-    expect(native.projects.map(({ id }) => id)).toEqual(["dp-lamp", "emzano", "taghvim"]);
+    expect(native.projects.map(({ id }) => id)).toEqual(expect.arrayContaining(["dp-lamp", "emzano", "taghvim"]));
     expect(getResume("fullstack").work).toEqual([]);
   });
 
   it("builds a single portfolio from real files", () => {
     expect(buildPortfolio().work.map(({ id }) => id)).toEqual(["namarang", "beyondgrow", "youtopin", "simkhan", "dp-lamp", "emzano", "taghvim", "behpardazan"]);
-    expect(buildPortfolio().projects.map(({ id }) => id)).toEqual(["beyondgrow", "youtopin", "simkhan", "wonderfruit", "dp-lamp", "emzano", "taghvim"]);
+    const projects = buildPortfolio().projects;
+    // New canonical JSON projects must be included without locking the collection size.
+    for (const profile of ["react", "react-native", "fullstack"]) {
+      expect(projects).toEqual(expect.arrayContaining(getResume(profile).projects));
+    }
+    expect(new Set(projects.map(({ id }) => id)).size).toBe(projects.length);
   });
 });

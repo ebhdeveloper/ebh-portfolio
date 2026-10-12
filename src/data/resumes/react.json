@@ -8,7 +8,7 @@
       "city": "Tehran",
       "countryCode": "IR"
     },
-    "label": "Senior React & Frontend Engineer",
+    "label": "Senior React & Frontend Engineer | AI-assisted Development",
     "summary": "Senior React and Frontend Engineer with 7+ years of experience building high-performance web applications, data-intensive dashboards, and digital products. Expert in React, Next.js, TypeScript, Astro, frontend architecture, real-time interfaces, PWAs, internationalization, and automated testing. Improved rendering and load performance by up to 90% and owned products from technical design through production delivery.",
     "translations": {
       "fa": {
@@ -16,7 +16,7 @@
         "location": {
           "city": "تهران"
         },
-        "label": "توسعه‌دهندهٔ ارشد ریکت و فرانت‌اند",
+        "label": "توسعه‌دهندهٔ ارشد ریکت و فرانت‌اند؛ توسعه با کمک هوش مصنوعی",
         "summary": "توسعه‌دهندهٔ ارشد ریکت و فرانت‌اند با بیش از ۷ سال تجربه در ساخت اپلیکیشن‌های وب با عملکرد بالا، داشبوردهای داده‌محور و محصولات دیجیتال. متخصص در React، Next.js، TypeScript، Astro، معماری فرانت‌اند، رابط‌های بلادرنگ، وب‌اپلیکیشن‌های پیش‌رونده، چندزبانه‌سازی و تست خودکار. بهبود عملکرد رندر و بارگذاری تا ۹۰٪ و مسئولیت توسعهٔ محصولات از طراحی فنی تا انتشار نسخهٔ نهایی."
       }
     }
@@ -36,7 +36,7 @@
       ],
       "translations": {
         "fa": {
-          "company": "نامارنگ",
+          "company": "نمارنگ",
           "position": "توسعه‌دهندهٔ ارشد ریکت",
           "location": "تهران، ایران",
           "highlights": [
@@ -127,6 +127,22 @@
     }
   ],
   "projects": [
+    {
+      "id": "namarang",
+      "title": "Namarang",
+      "description": "We are using AI coding agents to optimize performance, improve the code structure and project architecture, and develop new features.",
+      "type": "web",
+      "technologies": [],
+      "links": {
+        "website": "https://my.namarang.ir/"
+      },
+      "translations": {
+        "fa": {
+          "title": "نمارنگ",
+          "description": "با کمک ایجنت‌های هوش مصنوعی، در حال بهینه‌سازی عملکرد، بهبود ساختار کد و معماری پروژه و توسعهٔ قابلیت‌های جدید هستیم."
+        }
+      }
+    },
     {
       "id": "beyondgrow",
       "title": "BeyondGrow",

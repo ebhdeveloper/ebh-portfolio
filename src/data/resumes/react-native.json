@@ -35,7 +35,7 @@
       "id": "namarang",
       "translations": {
         "fa": {
-          "company": "نامارنگ",
+          "company": "نمارنگ",
           "position": "توسعه‌دهندهٔ ارشد ریکت با نکست‌جی‌اس",
           "location": "تهران",
           "highlights": [
@@ -282,6 +282,9 @@
           "title": "دی‌پی‌لمپ",
           "description": "اپلیکیشن چندسکویی تصفیهٔ هوا با ماژول‌های نیتیو و کنترل زندهٔ دستگاه."
         }
+      },
+      "links": {
+        "appStore": "https://apps.apple.com/tr/app/dp-air-purifier-lamp/id1549364974"
       }
     },
     {
@@ -299,6 +302,9 @@
           "title": "امضانو",
           "description": "اپلیکیشن امضای اسناد و مدیریت گواهی دیجیتال برای بانک تجارت."
         }
+      },
+      "links": {
+        "website": "https://app.emzano.com/"
       }
     },
     {
@@ -315,6 +321,57 @@
         "fa": {
           "title": "تقویم",
           "description": "اپلیکیشن چندسکویی تقویم و یادداشت با جابه‌جایی نیتیو صفحات و مدیریت آفلاین داده."
+        }
+      },
+      "links": {
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.app.taghvim&hl=fa"
+      }
+    },
+    {
+      "id": "tejarat-bank",
+      "title": "Tejarat Bank",
+      "description": "Tejarat Bank mobile application.",
+      "type": "mobile",
+      "technologies": [],
+      "links": {
+        "cafeBazaar": "http://cafebazaar.ir/app/?id=clm.tejaratbank.ir&ref=share"
+      },
+      "translations": {
+        "fa": {
+          "title": "بانک تجارت",
+          "description": "اپلیکیشن موبایل بانک تجارت."
+        }
+      }
+    },
+    {
+      "id": "sigma",
+      "title": "Sigma",
+      "description": "Sigma mobile application.",
+      "type": "mobile",
+      "technologies": [],
+      "links": {
+        "cafeBazaar": "https://cafebazaar.ir/app/ir.sigmatec.sigma?ref=share"
+      },
+      "translations": {
+        "fa": {
+          "title": "سیگما",
+          "description": "اپلیکیشن موبایل سیگما."
+        }
+      }
+    },
+    {
+      "id": "khoshkala",
+      "title": "Khoshkala",
+      "description": "Khoshkala mobile application.",
+      "type": "mobile",
+      "technologies": [],
+      "links": {
+        "cafeBazaar": "https://cafebazaar.ir/app/com.khoshkala"
+      },
+      "translations": {
+        "fa": {
+          "title": "خوش‌کالا",
+          "description": "اپلیکیشن موبایل خوش‌کالا."
         }
       }
     }

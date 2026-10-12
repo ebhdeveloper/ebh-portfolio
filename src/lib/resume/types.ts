@@ -26,6 +26,8 @@ export interface WorkExperience {
   highlights: string[];
 }
 
+export const projectLinkKinds = ["website", "github", "appStore", "googlePlay", "cafeBazaar"] as const;
+
 export interface PortfolioProject {
   translations?: ResumeTranslations<{ title: string; description: string }>;
   id: string;
@@ -34,12 +36,7 @@ export interface PortfolioProject {
   type: "web" | "mobile" | "both";
   technologies: string[];
   image?: string;
-  links?: {
-    website?: string;
-    github?: string;
-    appStore?: string;
-    googlePlay?: string;
-  };
+  links?: Partial<Record<(typeof projectLinkKinds)[number], string>>;
 }
 
 export interface SkillGroup {

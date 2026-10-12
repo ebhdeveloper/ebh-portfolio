@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useFormatter, useTranslations } from "next-intl";
 import { useStore } from "zustand";
+import { useScrollReveal } from "@/components/ui/use-scroll-reveal";
 import type { PortfolioProject, ResumeLocale } from "@/lib/resume/types";
 import { createProjectFilterStore, filterProjects, type ProjectFilter } from "../model/project-filter";
 import { ProjectCard } from "./project-card";
@@ -16,14 +17,15 @@ export function ProjectsSection({ projects }: { projects: (PortfolioProject & { 
   const filter = useStore(store, (state) => state.filter);
   const setFilter = useStore(store, (state) => state.setFilter);
   const visible = filterProjects(projects, filter);
+  const revealRef = useScrollReveal<HTMLElement>(visible.map((project) => project.id).join(","));
 
   return (
-    <section id="work" className="pf-work" aria-labelledby="work-title">
-      <div className="pf-section-heading">
+    <section ref={revealRef} id="work" className="pf-work" aria-labelledby="work-title">
+      <div className="pf-section-heading" data-scroll-reveal="">
         <div><p className="pf-eyebrow">01 / {t("work")}</p><h2 id="work-title">{t("workTitle")}</h2></div>
         <p>{t("workSubtitle")}</p>
       </div>
-      <div className="pf-work-toolbar">
+      <div className="pf-work-toolbar" data-scroll-reveal="">
         <div className="pf-filters" role="group" aria-label={t("filtersLabel")}>
           {filters.map((value) => (
             <button key={value} type="button" aria-pressed={filter === value} onClick={() => setFilter(value)}>{t(value)}</button>

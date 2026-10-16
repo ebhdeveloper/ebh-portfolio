@@ -19,6 +19,7 @@ export function localizeResume(resume: Resume, locale: ResumeLocale) {
     projects: resume.projects.map(entry => localize(entry, locale)),
     skills: resume.skills.map(entry => localize(entry, locale)),
     education: resume.education.map(entry => localize(entry, locale)),
+    languages: (resume.languages ?? []).map(entry => localize(entry, locale)),
   };
 }
 

@@ -5,17 +5,18 @@
     "url": "https://github.com/ebhdeveloper",
     "linkedin": "https://linkedin.com/in/ebrahimhamidi",
     "location": {
-      "city": "Tehran",
-      "countryCode": "IR"
+      "city": "Istanbul",
+      "countryCode": "TR"
     },
     "translations": {
       "fa": {
         "name": "ابراهیم حمیدی",
         "location": {
-          "city": "تهران"
+          "city": "استانبول"
         }
       }
-    }
+    },
+    "portfolio": "https://ebh-portfolio.vercel.app/en"
   },
   "work": [],
   "projects": [],

@@ -122,3 +122,20 @@ describe("validateResume", () => {
     expect(input).toEqual(before);
   });
 });
+
+
+describe("international resume fields", () => {
+  it.each([null, "English", [{ language: "English", fluency: "" }], [{ language: "", fluency: "B1" }]])("rejects malformed language data: %j", languages => {
+    expect(() => validateResume({ ...makeResume(), languages })).toThrow(/languages/);
+  });
+  it("requires a Persian fluency translation when a language has translations", () => {
+    expect(() => validateResume({ ...makeResume(), languages: [{ language: "English", fluency: "B1", translations: { fa: { language: "انگلیسی" } } }] })).toThrow(/fluency/);
+  });
+  it("rejects invalid portfolio URLs and blank availability", () => {
+    expect(() => validateResume({ ...makeResume(), basics: { ...makeResume().basics, portfolio: "javascript:alert(1)" } })).toThrow(/portfolio/);
+    expect(() => validateResume({ ...makeResume(), basics: { ...makeResume().basics, availability: " " } })).toThrow(/availability/);
+  });
+  it("requires project resume visibility to be a boolean", () => {
+    expect(() => validateResume({ ...makeResume(), projects: [{ ...makeProject(), includeInResume: "false" }] })).toThrow(/includeInResume/);
+  });
+});

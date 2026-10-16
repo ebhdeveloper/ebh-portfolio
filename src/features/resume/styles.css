@@ -10,34 +10,41 @@
   .cv-intro h2 { font-size: var(--text-title); font-weight: 700; margin-block: 0.5rem; }
   .cv-intro > p:last-child, .cv-print-hint { color: var(--muted-foreground); line-height: 1.8; font-size: var(--text-caption); }
   .cv-notice { border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-input); background: var(--surface); color: var(--muted-foreground); margin-bottom: 1.5rem; line-height: 1.8; }
-  .cv-document { max-width: 210mm; min-height: 297mm; margin-inline: auto; padding: 16mm; background: var(--resume-paper); color: var(--resume-ink); border-radius: var(--radius-input); box-shadow: var(--shadow-card); font-family: var(--font-montserrat), sans-serif; font-size: 11px; font-weight: 500; line-height: 1.7; }
-  .cv-document:lang(fa) { font-family: var(--font-iran-sans), var(--font-montserrat), sans-serif; font-weight: 400; font-size: 12px; line-height: 1.9; }
-  .cv-document :is(.cv-profile, h1, .cv-section h2):lang(fa) { letter-spacing: 0; text-transform: none; }
-  .cv-document [lang="en"] { font-family: var(--font-montserrat), sans-serif; font-weight: 500; }
+  .cv-document { max-width: 210mm; min-height: 297mm; margin-inline: auto; padding: 10mm 11mm; background: var(--resume-paper); color: var(--resume-ink); border-radius: var(--radius-input); box-shadow: var(--shadow-card); font-family: var(--font-montserrat), sans-serif; font-size: 12px; font-weight: 500; line-height: 1.4; }
+  .cv-document:lang(fa) { font-family: var(--font-iran-sans), var(--font-montserrat), sans-serif; font-weight: 400; font-size: 12px; line-height: 1.5; }
+  .cv-document :is(h1, .cv-section h2):lang(fa) { letter-spacing: 0; text-transform: none; }
+  .cv-document [lang="en"] { font-family: var(--font-montserrat), sans-serif; }
   .cv-document [lang="fa"] { font-family: var(--font-iran-sans), var(--font-montserrat), sans-serif; }
   .cv-document a { color: var(--resume-accent); overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 2px; }
-  .cv-document-header { padding-bottom: 1.5rem; border-bottom: 3px solid var(--resume-accent); }
-  .cv-profile { color: var(--resume-accent); text-transform: uppercase; letter-spacing: 0.12em; font-size: 9px; font-weight: 700; margin-bottom: 0.5rem; }
-  .cv-document h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.045em; }
-  .cv-role { font-size: 15px; margin-top: 0.5rem; color: var(--resume-accent); }
-  .cv-location { color: var(--resume-muted); margin-top: 0.5rem; }
-  .cv-contacts { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin-top: 0.5rem; font-size: 9px; }
-  .cv-section { margin-top: 1.5rem; }
-  .cv-section h2 { font-size: 11px; color: var(--resume-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.7rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--resume-rule); }
+  .cv-document-header { padding-bottom: 0.6rem; border-bottom: 2px solid var(--resume-accent); }
+  .cv-document h1 { font-size: clamp(1.6rem, 5vw, 2rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.045em; }
+  .cv-role { font-size: 14px; margin-top: 0.2rem; color: var(--resume-accent); }
+  .cv-location { color: var(--resume-muted); margin-top: 0.2rem; font-size: 10px; }
+  .cv-contacts { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin-top: 0.3rem; font-size: 10px; }
+  .cv-contact { display: inline-flex; align-items: baseline; gap: 0.2rem; max-width: 100%; }
+  .cv-section { margin-top: 0.65rem; }
+  .cv-section h2 { font-size: 11px; color: var(--resume-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0; margin-bottom: 0.3rem; padding-bottom: 0.2rem; border-bottom: 1px solid var(--resume-rule); }
   .cv-section h3 { font-size: 12px; font-weight: 700; line-height: 1.5; }
-  .cv-skills { display: grid; gap: 0.5rem; }
-  .cv-skills > div { display: grid; grid-template-columns: 10rem 1fr; gap: 0.75rem; }
-  .cv-skills dt { font-weight: 700; }
-  .cv-skills dd { color: var(--resume-muted); }
-  .cv-entry + .cv-entry { margin-top: 1rem; }
+  .cv-skills { display: grid; gap: 0.2rem; }
+  .cv-skills > div { display: block; }
+  .cv-skills dt { display: inline; font-weight: 700; }
+  .cv-languages { list-style: none; display: flex; flex-wrap: wrap; gap: 0.15rem 1.2rem; }
+  .cv-skills dd { display: inline; color: var(--resume-muted); }
+  .cv-entry + .cv-entry { margin-top: 0.45rem; }
   .cv-entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
   .cv-entry-heading > span { color: var(--resume-muted); font-size: 9px; white-space: nowrap; }
-  .cv-entry-role { margin-block: 0.2rem 0.5rem; font-size: 10px; color: var(--resume-accent); }
+  .cv-entry-role { font-weight: 500; font-size: 10px; color: var(--resume-accent); }
   .cv-entry-role > span { color: var(--resume-muted); }
-  .cv-entry ul { list-style: disc; padding-inline-start: 1rem; display: grid; gap: 0.3rem; }
+  .cv-entry ul { list-style: disc; padding-inline-start: 1rem; display: grid; gap: 0.15rem; }
   .cv-entry li::marker { color: var(--resume-accent); }
-  .cv-technologies { color: var(--resume-muted); font-size: 9px; margin-top: 0.3rem; }
-  .cv-project-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: 9px; margin-top: 0.3rem; }
+  .cv-technologies { color: var(--resume-muted); font-size: 10px; }
+  .cv-project-copy :is(h3, p), .cv-education-entry :is(h3, p) { display: inline; font-size: inherit; }
+  .cv-project-link-entry { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.5rem; margin-top: 0.2rem; break-inside: avoid; }
+  .cv-project-link-entry h3 { font-size: inherit; }
+  .cv-project-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+  .cv-project-heading h3 { flex-shrink: 0; }
+  .cv-project-heading .cv-technologies { text-align: left; }
+  .cv-project-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: 10px; }
   .cv-print-hint { margin-top: 1.5rem; text-align: center; }
   @media(max-width: 600px) {
     .cv-page { padding-inline: 1rem; }
@@ -45,27 +52,31 @@
     .cv-actions { width: 100%; gap: 0.5rem; }
     .cv-actions .ui-button { padding-inline: 1rem; font-size: 0.8rem; }
     .cv-document { padding: 1.25rem; font-size: 11px; min-height: auto; }
-    .cv-skills > div { grid-template-columns: 1fr; gap: 0; }
     .cv-entry-heading { flex-wrap: wrap; }
   }
 }
 
-@page { size: A4; margin: 14mm 16mm; }
+@page { size: A4; margin: 10mm 11mm; }
 @media print {
   html, body { height: auto !important; min-height: 0 !important; background: white !important; }
   .cv-page { max-width: none; padding: 0; margin: 0; }
   .cv-toolbar, .cv-intro, .cv-notice, .cv-print-hint { display: none !important; }
-  .cv-document { width: auto; max-width: none; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: var(--resume-paper); color: var(--resume-ink); font-size: 9pt; line-height: 1.5; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-  .cv-document h1 { font-size: 26pt; }
-  .cv-document-header { padding-bottom: 12pt; }
-  .cv-profile { font-size: 8pt; }
-  .cv-section { margin-top: 14pt; }
-  .cv-section h2 { font-size: 9pt; break-after: avoid; }
-  .cv-section h3 { font-size: 10pt; break-after: avoid; }
+  .cv-document { width: auto; max-width: none; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: var(--resume-paper); color: var(--resume-ink); font-size: 9.5pt; line-height: 1.3; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .cv-document h1 { font-size: 23pt; }
+  .cv-document-header { padding-bottom: 6pt; }
+  .cv-section { margin-top: 4pt; }
+  .cv-section h2 { font-size: 9pt; margin-bottom: 3pt; padding-bottom: 2pt; break-after: avoid; }
+  .cv-section h3 { font-size: 9.5pt; break-after: avoid; }
   .cv-entry-heading, .cv-entry-role { break-after: avoid; }
-  .cv-entry { break-inside: auto; }
+  .cv-entry + .cv-entry { margin-top: 4pt; }
+  .cv-entry ul { gap: 1.5pt; }
+  .cv-skills { gap: 2pt; }
+  .cv-entry { break-inside: avoid; }
+  .cv-document:lang(fa) { font-size: 10pt; line-height: 1.3; }
+  .cv-role { font-size: 10.5pt; }
+  .cv-location, .cv-contacts, .cv-entry-role, .cv-entry-heading > span, .cv-technologies, .cv-project-links { font-size: 8.5pt; }
   .cv-entry li, .cv-skills > div, .cv-section:last-child .cv-entry { break-inside: avoid; }
   .cv-entry p, .cv-entry li { orphans: 3; widows: 3; }
-  .cv-skills > div { grid-template-columns: 10rem 1fr; gap: 0.75rem; }
+  .cv-skills > div { display: block; }
   .cv-entry-heading { flex-wrap: nowrap; }
 }

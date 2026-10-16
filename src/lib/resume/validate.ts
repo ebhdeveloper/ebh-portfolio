@@ -63,11 +63,11 @@ function translation(record: Record<string, unknown>, path: string, keys: string
   if (Object.keys(translations).some(key => key !== "fa")) fail(`${path}.translations`, "supports only fa (English is the base)");
   if (translations.fa === undefined) return;
   const translated = object(translations.fa, `${path}.translations.fa`);
-  const allowed = [...keys, ...(path === "basics" ? ["label", "summary", "location"] : []), ...(path.startsWith("work[") ? ["highlights"] : [])];
+  const allowed = [...keys, ...(path === "basics" ? ["label", "summary", "availability", "location"] : []), ...(path.startsWith("work[") ? ["highlights"] : [])];
   if (Object.keys(translated).some(key => !allowed.includes(key))) fail(`${path}.translations.fa`, "contains a non-translatable field");
   keys.forEach(key => string(translated[key], `${path}.translations.fa.${key}`));
   if (path === "basics") {
-    for (const key of ["label", "summary"]) {
+    for (const key of ["label", "summary", "availability"]) {
       if (record[key] !== undefined) string(translated[key], `${path}.translations.fa.${key}`);
       else if (translated[key] !== undefined) fail(`${path}.translations.fa.${key}`, "has no English source");
     }
@@ -91,8 +91,8 @@ export function validateResume(input: unknown): Resume {
   string(basics.name, "basics.name");
   string(basics.email, "basics.email");
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(basics.email)) fail("basics.email", "must be an email address");
-  optionalStrings(basics, ["label", "summary"], "basics");
-  ["url", "linkedin"].forEach((key) => {
+  optionalStrings(basics, ["label", "summary", "availability"], "basics");
+  ["url", "linkedin", "portfolio"].forEach((key) => {
     if (basics[key] !== undefined) url(basics[key], `basics.${key}`);
   });
   if (basics.location !== undefined) {
@@ -120,6 +120,7 @@ export function validateResume(input: unknown): Resume {
     ["title", "description"].forEach((key) => string(entry[key], `${path}.${key}`));
     if (!["web", "mobile", "both"].includes(entry.type as string)) fail(`${path}.type`, "must be web, mobile or both");
     strings(entry.technologies, `${path}.technologies`);
+    if (entry.includeInResume !== undefined && typeof entry.includeInResume !== "boolean") fail(`${path}.includeInResume`, "must be a boolean");
     translation(entry, path, ["title", "description"]);
     if (entry.links !== undefined) {
       const links = object(entry.links, `${path}.links`);
@@ -146,6 +147,12 @@ export function validateResume(input: unknown): Resume {
     ["institution", "area", "studyType"].forEach((key) => string(entry[key], `${path}.${key}`));
     translation(entry, path, ["institution", "area", "studyType"]);
   });
+  if (resume.languages !== undefined) {
+    items(resume, "languages", (entry, path) => {
+      ["language", "fluency"].forEach(key => string(entry[key], `${path}.${key}`));
+      translation(entry, path, ["language", "fluency"]);
+    });
+  }
   // The guards above check every field of the public Resume contract.
   return input as Resume;
 }

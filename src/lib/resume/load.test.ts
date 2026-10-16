@@ -115,11 +115,10 @@ describe("actual resume JSON files", () => {
     [resume.work, resume.projects, resume.skills, resume.education].forEach((items) => expect(Array.isArray(items)).toBe(true));
   });
 
-  it("contains the supplied real projects and preserves native metrics", () => {
+  it("contains the supplied real projects and native work history", () => {
     expect(getResume("react").projects.map(({ id }) => id)).toEqual(expect.arrayContaining(["beyondgrow", "youtopin", "simkhan", "wonderfruit"]));
     const native = getResume("react-native");
     expect(native.work.map(({ id }) => id)).toEqual(["namarang", "dp-lamp", "emzano", "taghvim", "behpardazan"]);
-    expect(native.work.find(({ id }) => id === "taghvim")?.highlights).toContain("Optimized application performance by ~95%, eliminating lags and ensuring seamless user experience across devices.");
     expect(native.projects.map(({ id }) => id)).toEqual(expect.arrayContaining(["dp-lamp", "emzano", "taghvim"]));
     expect(getResume("fullstack").work).toEqual([]);
   });

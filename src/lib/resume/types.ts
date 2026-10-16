@@ -5,11 +5,13 @@ export type ResumeTranslations<T> = { fa?: T };
 export type ResumeProfile = "react" | "react-native" | "fullstack";
 
 export interface ResumeBasics {
-  translations?: ResumeTranslations<{ name: string; label?: string; summary?: string; location?: { city?: string } }>;
+  translations?: ResumeTranslations<{ name: string; label?: string; summary?: string; availability?: string; location?: { city?: string } }>;
   name: string;
   email: string;
   label?: string;
   summary?: string;
+  availability?: string;
+  portfolio?: string;
   url?: string;
   linkedin?: string;
   location?: { city?: string; countryCode?: string };
@@ -36,6 +38,7 @@ export interface PortfolioProject {
   type: "web" | "mobile" | "both";
   technologies: string[];
   image?: string;
+  includeInResume?: boolean;
   links?: Partial<Record<(typeof projectLinkKinds)[number], string>>;
 }
 
@@ -52,8 +55,15 @@ export interface Education {
   studyType: string;
 }
 
+export interface ResumeLanguage {
+  language: string;
+  fluency: string;
+  translations?: ResumeTranslations<{ language: string; fluency: string }>;
+}
+
 export interface Resume {
   basics: ResumeBasics;
+  languages?: ResumeLanguage[];
   work: WorkExperience[];
   projects: PortfolioProject[];
   skills: SkillGroup[];

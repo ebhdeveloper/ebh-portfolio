@@ -48,6 +48,7 @@ export function buildResumeDocument(profile: ResumeProfile, source: Resume, loca
     headings,
     fileName: `Ebrahim-Hamidi-${profile}-CV${locale === "fa" ? "-fa" : ""}.pdf`,
     basics: { ...basics, name: text(basics.name), ...(basics.label ? { label: text(basics.label) } : {}), ...(basics.summary ? { summary: text(basics.summary) } : {}), ...(basics.availability ? { availability: text(basics.availability) } : {}) },
+    locationLocale: basics.locale,
     location: [basics.location?.city, country].filter(Boolean).join(", "),
     contacts: [
       { label: basics.email, url: `mailto:${basics.email}` },

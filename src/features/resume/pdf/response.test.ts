@@ -63,3 +63,17 @@ describe("compact resume pagination", () => {
     expect((pdf.match(/\/Type\s*\/Page(?=\s|\/|>)/g) ?? []).length).toBeGreaterThan(1);
   }, 30000);
 });
+
+
+describe("custom PDF location", () => {
+  it("rejects oversized locations before rendering", async () => {
+    expect((await getPdfResponse("react", "en", "a".repeat(121))).status).toBe(400);
+  });
+  it.each(["Tehran, Iran", "تهران، ایران"])("generates a PDF with custom location %s", async location => {
+    const response = await getPdfResponse("react", "en", location);
+    expect(response.status).toBe(200);
+    const bytes = new Uint8Array(await response.arrayBuffer());
+    expect(new TextDecoder().decode(bytes.slice(0, 5))).toBe("%PDF-");
+    expect(response.headers.get("Cache-Control")).toBe("no-store");
+  }, 30000);
+});

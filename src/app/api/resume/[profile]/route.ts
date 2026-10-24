@@ -5,5 +5,6 @@ export async function GET(request: Request, { params }: RouteContext<"/api/resum
   // Generate from this deployment's JSON on demand, outside the prerender pass.
   await connection();
   const { profile } = await params;
-  return getPdfResponse(profile, new URL(request.url).searchParams.get("locale") ?? "en");
+  const query = new URL(request.url).searchParams;
+  return getPdfResponse(profile, query.get("locale") ?? "en", query.get("location") ?? "");
 }

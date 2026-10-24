@@ -68,6 +68,9 @@
     "description": "My experience, projects, and skills in this field. Download the PDF or print the resume.",
     "incomplete": "This version currently contains contact information only. Experience and skills have not been added yet.",
     "printHint": "For a PDF from the print dialog, choose Save as PDF. For a direct download, use Download PDF.",
+    "location": "City and country",
+    "locationHint": "Shown in the preview, printout and PDF. Leave blank to use the original location.",
+    "resetLocation": "Reset location",
     "switchLanguage": "View resume in Persian"
   }
 }

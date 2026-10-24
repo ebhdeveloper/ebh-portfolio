@@ -6,7 +6,7 @@ export function ResumeDocument({ document: cv }: { document: ResumeDocumentModel
       <header className="cv-document-header">
         <h1 lang={cv.basics.locale} dir={cv.basics.locale === "fa" ? "rtl" : "ltr"}>{cv.basics.name}</h1>
         {cv.basics.label && <p className="cv-role" lang={cv.basics.locale}>{cv.basics.label}</p>}
-        {(cv.location || cv.basics.availability) && <p className="cv-location" lang={cv.basics.locale} dir={cv.basics.locale === "fa" ? "rtl" : "ltr"}>{[cv.location, cv.basics.availability].filter(Boolean).join(" | ")}</p>}
+        {(cv.location || cv.basics.availability) && <p className="cv-location" lang={cv.basics.locale} dir={cv.basics.locale === "fa" ? "rtl" : "ltr"}><bdi lang={cv.locationLocale} dir={cv.locationLocale === "fa" ? "rtl" : "ltr"}>{cv.location}</bdi>{cv.location && cv.basics.availability && " | "}{cv.basics.availability}</p>}
         <div className="cv-contacts">{cv.contacts.map(contact => <span className="cv-contact" key={contact.url}>{contact.url === cv.basics.portfolio && <span>{cv.headings.portfolio}: </span>}<a href={contact.url} lang="en" dir="ltr">{contact.label}</a></span>)}</div>
       </header>
       {cv.basics.summary && <section className="cv-section"><h2>{cv.headings.profile}</h2><p lang={cv.basics.locale} dir={cv.basics.locale === "fa" ? "rtl" : "ltr"}>{cv.basics.summary}</p></section>}

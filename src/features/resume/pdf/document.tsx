@@ -50,7 +50,7 @@ export function ResumePdfDocument({ document: cv }: { document: ResumeDocumentMo
         <View style={styles.header} wrap={false}>
           <Text style={[styles.name, languageStyle(cv.basics.locale)]}>{cv.basics.name}</Text>
           {cv.basics.label && <Text style={[styles.role, languageStyle(cv.basics.locale)]}>{cv.basics.label}</Text>}
-          {(cv.location || cv.basics.availability) && <Text style={[styles.meta, languageStyle(cv.basics.locale)]}>{[cv.location, cv.basics.availability].filter(Boolean).join(" | ")}</Text>}
+          {(cv.location || cv.basics.availability) && <Text style={[styles.meta, languageStyle(cv.basics.locale)]}><Text style={languageStyle(cv.locationLocale)}>{cv.location}</Text>{cv.location && cv.basics.availability ? " | " : ""}{cv.basics.availability}</Text>}
           <View style={[styles.contacts, row]}>{cv.contacts.map(contact => (
             <View key={contact.url} style={[styles.contact, row]}>
               {contact.url === cv.basics.portfolio && <Text style={[styles.link, languageStyle(cv.locale)]}>{cv.headings.portfolio}:</Text>}
